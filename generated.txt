@@ -1,0 +1,1 @@
+# What ./generate.py has made: <long|short> <id> <date>. Delete a line to make that item again.

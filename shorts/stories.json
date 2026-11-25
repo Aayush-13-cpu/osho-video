@@ -1,0 +1,106 @@
+{"_style": "silhouette (the default style; stories_inkwash.json holds the sumi-e set)",
+ "stories": [
+  {"id": "empty-your-cup", "genre": "zen", "title": "Empty Your Cup", "ref": "A Zen story", "beats": [
+   {"say": "A famous professor climbed a mountain to meet a Zen master. He had not come to listen. He had come to talk.",
+    "sky": "day", "ground": "mountain", "cast": [{"k": "hut", "x": 800, "s": 1.1}, {"k": "man", "x": 180, "acts": [{"do": "walk", "to": 520, "at": 0.4, "dur": 4}]}]},
+   {"say": "The master smiled and began to pour the tea. The cup filled up... and still he kept pouring.",
+    "sky": "day", "ground": "garden", "cast": [{"k": "cup", "x": 560, "s": 1.6, "acts": [{"do": "tint", "color": "#c89a50", "at": 2.0, "dur": 2}]},
+     {"k": "teapot", "x": 640, "y": 1260, "s": 1.3, "flip": true, "acts": [{"do": "rock", "amp": 14, "period": 3}]},
+     {"k": "master", "x": 820, "flip": true, "acts": [{"do": "reach", "at": 0.6}]}, {"k": "man", "x": 260, "acts": [{"do": "sit", "at": 0.3}]}]},
+   {"say": "Stop, cried the professor. It is full! No more will go in. Exactly, said the master. Like this cup, you are full of your opinions.",
+    "sky": "day", "ground": "garden", "cast": [{"k": "cup", "x": 560, "s": 1.6}, {"k": "master", "x": 820, "flip": true, "acts": [{"do": "bless", "at": 3.4}]},
+     {"k": "man", "x": 260, "acts": [{"do": "raise", "at": 0.4}, {"do": "lower", "at": 2.4}]}]},
+   {"say": "How can I show you anything, unless you first empty your cup? Tonight, put down everything you know. One breath. Empty. Only this.",
+    "sky": "dusk", "ground": "zen", "fx": ["mist"], "cast": [{"k": "master", "x": 540, "acts": [{"do": "sit", "at": 0.4}, {"do": "breathe", "at": 1.4}]}]}
+  ]},
+  {"id": "two-monks-and-the-river", "genre": "zen", "title": "Two Monks and the River", "ref": "A Zen story", "beats": [
+   {"say": "Two monks came to a flooded river. A young woman stood on the bank, afraid of the current. And monks were not allowed even to look at a woman.",
+    "sky": "day", "ground": "river", "cast": [{"k": "woman", "x": 820, "flip": true}, {"k": "monk", "x": 260, "acts": [{"do": "walk", "to": 480, "at": 0.4, "dur": 4}]}, {"k": "monk", "x": 120, "acts": [{"do": "walk", "to": 330, "at": 0.4, "dur": 4}]}]},
+   {"say": "The old monk simply lifted her up, carried her through the water, and set her down on the far side. Then the two of them walked on.",
+    "sky": "day", "ground": "river", "cast": [{"k": "monk", "x": 300, "acts": [{"do": "walk", "to": 820, "at": 0.6, "dur": 5}]}, {"k": "woman", "x": 320, "y": 1200, "s": 1.1, "acts": [{"do": "walk", "to": 840, "at": 0.6, "dur": 5}]}]},
+   {"say": "For hours the young monk burned in silence. At last he exploded: How could you touch her? And the old monk said: I left her at the river. You are still carrying her.",
+    "sky": "dusk", "ground": "mountain", "cast": [{"k": "monk", "x": 680, "flip": true, "acts": [{"do": "bless", "at": 7.0}]}, {"k": "monk", "x": 380, "acts": [{"do": "raise", "at": 4.0}]}]},
+   {"say": "Who are you still carrying? Put them down. Feel how light you are.",
+    "sky": "night", "ground": "river", "fx": ["ripples"], "cast": [{"k": "seeker", "x": 540, "acts": [{"do": "sit", "at": 0.6}, {"do": "breathe", "at": 1.6}]}]}
+  ]},
+  {"id": "the-finger-and-the-moon", "genre": "zen", "title": "The Finger and the Moon", "ref": "A Zen saying", "beats": [
+   {"say": "A man asked a Zen master: Where is this truth you keep talking about? The master said nothing. He just raised his finger, and pointed at the full moon.",
+    "sky": "night", "ground": "hills", "cast": [{"k": "moon", "x": 760, "y": 1060, "s": 0.8}, {"k": "master", "x": 500, "acts": [{"do": "reach", "at": 4.0}]}, {"k": "man", "x": 260}]},
+   {"say": "The man stared at the finger. What a finger, he said. Let me bow to this finger. Let me build a temple for this finger.",
+    "sky": "night", "ground": "hills", "cast": [{"k": "master", "x": 500, "acts": [{"do": "reach"}]}, {"k": "man", "x": 260, "acts": [{"do": "bow", "at": 2.4}]}]},
+   {"say": "And the master laughed. Fool, he said. Look where it is pointing. All the books, all the temples... they are only fingers.",
+    "sky": "night", "ground": "sea", "cast": [{"k": "moon", "x": 760, "y": 1060, "s": 0.8}, {"k": "master", "x": 400, "acts": [{"do": "reach", "at": 1.0}]}]},
+   {"say": "Don't hold on to the finger. Lift your eyes. Tonight, look at the moon, and say nothing.",
+    "sky": "night", "ground": "sea", "fx": ["ripples"], "cast": [{"k": "moon", "x": 760, "y": 1060, "s": 0.8}, {"k": "seeker", "x": 340, "acts": [{"do": "sit", "at": 1.0}]}]}
+  ]},
+  {"id": "is-that-so", "genre": "zen", "title": "Is That So?", "ref": "A Zen story", "beats": [
+   {"say": "A girl in the village became pregnant, and to protect the real father she named the old master, Hakuin. Her family came to his hut, screaming insults.",
+    "sky": "dusk", "ground": "city", "cast": [{"k": "hut", "x": 800, "s": 1.0}, {"k": "master", "x": 600, "flip": true}, {"k": "man", "x": 240, "acts": [{"do": "raise", "at": 4.0}]}]},
+   {"say": "Hakuin listened, and said only: Is that so? When the baby was born, they left it with him. He cared for it with great love, while the whole village turned against him.",
+    "sky": "day", "ground": "hills", "cast": [{"k": "master", "x": 480, "acts": [{"do": "reach", "at": 5.0}]}, {"k": "child", "x": 660}]},
+   {"say": "A year later the girl confessed. Her family came back, ashamed, begging forgiveness, asking for the child. Hakuin handed the baby back and said: Is that so?",
+    "sky": "dawn", "ground": "hills", "cast": [{"k": "master", "x": 720, "flip": true, "acts": [{"do": "bless", "at": 7.0}]}, {"k": "child", "x": 560, "acts": [{"do": "walk", "to": 400, "at": 6.0, "dur": 2}]}, {"k": "man", "x": 260, "acts": [{"do": "bow", "at": 2.0}]}]},
+   {"say": "Praise and blame are only weather. Be the sky. The next time someone judges you, smile inside, and say: Is that so?",
+    "sky": "dawn", "ground": "zen", "fx": ["rays"], "cast": [{"k": "master", "x": 540, "acts": [{"do": "sit", "at": 0.6}]}]}
+  ]},
+  {"id": "the-farmers-maybe", "genre": "tao", "title": "The Farmer Who Said Maybe", "ref": "A Taoist story", "beats": [
+   {"say": "A farmer's only horse ran away. Such bad luck, said the neighbours. Maybe, said the farmer. A week later it came back with seven wild horses. Such good luck! Maybe.",
+    "sky": "day", "ground": "field", "cast": [{"k": "farmer", "x": 360}, {"k": "crowd", "x": 780, "n": 4, "s": 0.8}]},
+   {"say": "His son tried to ride one, fell, and broke his leg. Bad luck! said the neighbours. And the farmer only said: maybe.",
+    "sky": "dusk", "ground": "field", "cast": [{"k": "farmer", "x": 360}, {"k": "child", "x": 700, "acts": [{"do": "lie", "at": 1.6}]}]},
+   {"say": "Then the army came to take every young man to the war. They left the boy with the broken leg behind. Good luck! Maybe.",
+    "sky": "dusk", "ground": "city", "cast": [{"k": "samurai", "x": 120, "acts": [{"do": "walk", "to": 980, "at": 0.4, "dur": 7}]}, {"k": "child", "x": 600, "acts": [{"do": "lie"}]}]},
+   {"say": "You never know where the story is going. Don't close the book after one page. Whatever happens today, try one word: maybe.",
+    "sky": "night", "ground": "field", "fx": ["fireflies"], "cast": [{"k": "farmer", "x": 540, "acts": [{"do": "sit", "at": 1.0}]}]}
+  ]},
+  {"id": "searching-under-the-lamp", "genre": "nasruddin", "title": "Searching Under the Lamp", "ref": "A Nasruddin story", "beats": [
+   {"say": "One night Mulla Nasruddin was on his knees under a street lamp, searching. A neighbour asked: What have you lost, Mulla? My key, he said.",
+    "sky": "night", "ground": "city", "cast": [{"k": "lamp", "x": 540, "y": 1160, "s": 1.6, "acts": [{"do": "flicker"}]}, {"k": "nasruddin", "x": 460, "acts": [{"do": "kneel", "at": 0.2}]}, {"k": "man", "x": 1000, "flip": true, "acts": [{"do": "walk", "to": 760, "at": 1.0, "dur": 3}]}]},
+   {"say": "So the neighbour got down and searched with him, for a long, long time. Finally he asked: Are you sure you lost it here? No, said Nasruddin. I lost it in my house.",
+    "sky": "night", "ground": "city", "cast": [{"k": "lamp", "x": 540, "y": 1160, "s": 1.6, "acts": [{"do": "flicker"}]}, {"k": "nasruddin", "x": 460, "acts": [{"do": "kneel"}, {"do": "stand", "at": 6.0}]}, {"k": "man", "x": 760, "flip": true, "acts": [{"do": "kneel", "at": 0.4}]}]},
+   {"say": "Then why are we searching out here? Because, said Nasruddin, there is more light here!",
+    "sky": "night", "ground": "city", "cast": [{"k": "lamp", "x": 540, "y": 1160, "s": 1.6, "acts": [{"do": "flicker"}]}, {"k": "nasruddin", "x": 460, "acts": [{"do": "raise", "at": 2.4}]}, {"k": "man", "x": 760, "flip": true, "acts": [{"do": "kneel"}]}]},
+   {"say": "We laugh. But we all search outside for what we lost inside. Tonight, turn the lamp around. Close your eyes, and look in.",
+    "sky": "night", "ground": "city", "cast": [{"k": "house", "x": 760, "s": 1.0}, {"k": "seeker", "x": 380, "acts": [{"do": "sit", "at": 4.0}]}]}
+  ]},
+  {"id": "the-donkey-he-rides", "genre": "nasruddin", "title": "Nasruddin's Lost Donkey", "ref": "A Nasruddin story", "beats": [
+   {"say": "Mulla Nasruddin came galloping through the bazaar on his donkey, shouting: Has anyone seen my donkey? I have lost my donkey!",
+    "sky": "day", "ground": "city", "cast": [{"k": "donkey", "x": 120, "s": 1.3, "acts": [{"do": "walk", "to": 620, "at": 0.4, "dur": 5}]}, {"k": "nasruddin", "in": 0, "x": 0, "y": -140, "s": 0.7, "acts": [{"do": "raise", "at": 1.6}]}]},
+   {"say": "He searched every street. People were laughing so hard they could not speak. At last an old man shouted: Mulla, you are sitting on it!",
+    "sky": "day", "ground": "city", "cast": [{"k": "crowd", "x": 300, "n": 5, "s": 0.8}, {"k": "donkey", "x": 700, "s": 1.3, "flip": true}, {"k": "nasruddin", "in": 1, "x": 0, "y": -140, "s": 0.7}, {"k": "elder", "x": 420, "acts": [{"do": "raise", "at": 5.0}]}]},
+   {"say": "Nasruddin looked down, amazed. Thank God, he said. I was so worried!",
+    "sky": "dusk", "ground": "city", "cast": [{"k": "donkey", "x": 540, "s": 1.3}, {"k": "nasruddin", "in": 0, "x": 0, "y": -140, "s": 0.7, "acts": [{"do": "raise", "at": 2.0}]}]},
+   {"say": "You are searching for peace, for joy, for God. Stop for one moment. Look down. You may be sitting on it.",
+    "sky": "dusk", "ground": "desert", "fx": ["rays"], "cast": [{"k": "donkey", "x": 540, "s": 1.3}, {"k": "seeker", "in": 0, "x": 0, "y": -140, "s": 0.7, "acts": [{"do": "sit", "at": 3.0}]}]}
+  ]},
+  {"id": "the-musk-deer", "genre": "fable", "title": "The Musk Deer", "ref": "An Indian fable", "beats": [
+   {"say": "In a Himalayan forest a little deer smelled the most beautiful fragrance in the world. Musk. And it went mad, searching for where it came from.",
+    "sky": "dawn", "ground": "forest", "fx": ["mist"], "cast": [{"k": "seeker", "x": 540, "acts": [{"do": "reach", "at": 3.0}]}]},
+   {"say": "It ran through the forest, over the rocks, through the streams. Day and night, without food, without sleep. The smell was always there, just ahead.",
+    "sky": "day", "ground": "forest", "cast": [{"k": "seeker", "x": 100, "acts": [{"do": "run", "to": 980, "at": 0.4, "dur": 7}]}]},
+   {"say": "It never found it. Because the musk was inside its own body. It was carrying the very thing it was chasing.",
+    "sky": "night", "ground": "forest", "fx": ["sparkle"], "cast": [{"k": "seeker", "x": 540, "acts": [{"do": "kneel", "at": 1.0}]}]},
+   {"say": "What you are chasing is not out there. Stop running, just for a moment. Breathe in. Smell it. It is you.",
+    "sky": "dawn", "ground": "hills", "fx": ["rays"], "cast": [{"k": "seeker", "x": 540, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
+  ]},
+  {"id": "the-empty-boat", "genre": "tao", "title": "The Empty Boat", "ref": "Chuang Tzu", "beats": [
+   {"say": "A man is rowing over a misty river when another boat crashes into his. He jumps up, furious, ready to shout and fight.",
+    "sky": "dawn", "ground": "sea", "fx": ["mist"], "cast": [{"k": "boat", "x": 380, "y": 1480, "s": 0.9, "acts": [{"do": "rock", "amp": 7, "period": 1.4}]}, {"k": "man", "in": 0, "x": -40, "y": -40, "s": 0.8, "acts": [{"do": "raise", "at": 2.4}]}, {"k": "boat", "x": 820, "y": 1500, "s": 0.9, "flip": true}]},
+   {"say": "Then he looks. The other boat is empty. It came loose from its rope and drifted down the river. And all his anger is suddenly gone.",
+    "sky": "dawn", "ground": "sea", "cast": [{"k": "boat", "x": 380, "y": 1480, "s": 0.9}, {"k": "man", "in": 0, "x": -40, "y": -40, "s": 0.8, "acts": [{"do": "lower", "at": 3.0}]}, {"k": "boat", "x": 820, "y": 1500, "s": 0.9, "flip": true, "acts": [{"do": "drift", "amp": 30, "period": 6}]}]},
+   {"say": "Chuang Tzu says: empty your own boat as you go down the river of life, and nobody will fight you. There will be nobody there to hurt.",
+    "sky": "day", "ground": "sea", "fx": ["ripples"], "cast": [{"k": "boat", "x": 540, "y": 1480, "s": 0.9, "acts": [{"do": "drift", "amp": 40, "period": 8}]}]},
+   {"say": "When someone pushes you today, feel for that empty boat inside. Let the insult pass through you, like wind.",
+    "sky": "dusk", "ground": "sea", "fx": ["ripples"], "cast": [{"k": "seeker", "x": 540, "acts": [{"do": "sit", "at": 1.0}]}]}
+  ]},
+  {"id": "heaven-and-hell", "genre": "zen", "title": "Heaven and Hell", "ref": "A Zen story", "beats": [
+   {"say": "A proud samurai demanded of an old monk: Tell me about heaven and hell! The monk looked at him and said: You? You are too stupid to understand.",
+    "sky": "day", "ground": "zen", "cast": [{"k": "master", "x": 760, "flip": true, "acts": [{"do": "sit"}]}, {"k": "samurai", "x": 330}]},
+   {"say": "The samurai went red with rage, and pulled out his sword to cut him down. And quietly the monk said: That is hell.",
+    "sky": "storm", "ground": "zen", "fx": ["lightning"], "cast": [{"k": "master", "x": 760, "flip": true, "acts": [{"do": "sit"}]}, {"k": "samurai", "x": 330, "acts": [{"do": "raise", "at": 1.4}]}]},
+   {"say": "The samurai froze. He understood. He put the sword away and bowed, full of gratitude. And the monk said: That is heaven.",
+    "sky": "dawn", "ground": "zen", "fx": ["rays"], "cast": [{"k": "master", "x": 760, "flip": true, "acts": [{"do": "sit"}, {"do": "bless", "at": 5.0}]}, {"k": "samurai", "x": 330, "acts": [{"do": "lower", "at": 1.0}, {"do": "bow", "at": 2.4}]}]},
+   {"say": "Heaven and hell are not far away. You step into one of them every time you react. Watch for the next one coming.",
+    "sky": "dusk", "ground": "zen", "cast": [{"k": "seeker", "x": 540, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
+  ]}
+ ]}

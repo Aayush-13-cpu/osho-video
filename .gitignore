@@ -1,0 +1,15 @@
+models/
+assets/
+out/
+renders/
+node_modules/
+index.html
+__pycache__/
+shorts/build/
+shorts/output/
+*.zip
+longform/build/
+/videos/
+docs/book/book.html
+.venv/
+.source-snapshot.txt

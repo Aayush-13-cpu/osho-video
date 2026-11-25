@@ -1,0 +1,70 @@
+{
+  "title": "TapoBhumi",
+  "subtitle": "Stories and meditations for a quiet mind",
+  "scenes": [
+    {
+      "id": "intro", "icon": "", "year": "", "title": "TapoBhumi", "ref": "", "quote": "",
+      "narration": "Sit down for a moment. Not for long. Just long enough to hear a story... and then to hear the silence after it."
+    },
+    {
+      "id": "awareness", "icon": "eye", "year": "Awareness", "title": "Just Watch",
+      "ref": "A meditation", "quote": "The one who watches the mind is not the mind.",
+      "narration": "Here we talk about awareness. Not thinking harder. Just watching. Watching the mind, the way you watch traffic from a window."
+    },
+    {
+      "id": "zen", "icon": "lotus", "year": "Zen", "title": "Empty Your Cup",
+      "ref": "A Zen story", "quote": "A full cup can receive nothing.",
+      "narration": "We tell the old Zen stories. A professor comes to a master, full of opinions, and the master simply pours the tea... and keeps pouring."
+    },
+    {
+      "id": "tao", "icon": "wave", "year": "Tao", "title": "The Way of Water",
+      "ref": "Lao Tzu", "quote": "Water does not fight, and nothing can stop it.",
+      "narration": "The Taoist masters looked at water. It never fights. It goes around the rock. And in the end, the rock is gone, and the river is still singing."
+    },
+    {
+      "id": "sufi", "icon": "spiral", "year": "Sufi", "title": "Tales of the Heart",
+      "ref": "A Sufi tale", "quote": "The heart knows the road the head cannot see.",
+      "narration": "The Sufis tell their truths as stories, so they slip past the mind and land straight in the heart."
+    },
+    {
+      "id": "nasruddin", "icon": "sun", "year": "Laughter", "title": "Mulla Nasruddin",
+      "ref": "A Nasruddin story", "quote": "He searched for the key where the light was better.",
+      "narration": "And there is Mulla Nasruddin, the wise fool. You will laugh at him... and then, slowly, you will see that he is you."
+    },
+    {
+      "id": "buddha", "icon": "bodhi", "year": "Buddha", "title": "Under the Tree",
+      "ref": "Dhammapada 202 (Müller)", "quote": "There is no fire like passion; there is no happiness higher than rest.",
+      "narration": "Twenty-five centuries ago a man sat under a tree and decided not to move until he understood. We tell his stories too."
+    },
+    {
+      "id": "love", "icon": "flame", "year": "Love", "title": "Love Without Holding",
+      "ref": "A reflection", "quote": "A bird in a golden cage is still in a cage.",
+      "narration": "We talk about love. Not the love that holds and grabs and possesses. The love that opens the hand and lets the bird fly."
+    },
+    {
+      "id": "fear", "icon": "moon", "year": "Fear", "title": "The Rope and the Snake",
+      "ref": "An Upanishadic image", "quote": "Bring a lamp, and the snake was always a rope.",
+      "narration": "We look at fear. Most of our fear is a rope in the dark that we have taken for a snake. All that is needed is a little light."
+    },
+    {
+      "id": "silence", "icon": "bell", "year": "Silence", "title": "The Sound of the Bell",
+      "ref": "A Zen story", "quote": "Listen to the bell until it is only silence.",
+      "narration": "We listen to silence. A temple bell rings... and fades... and in that fading, something in you becomes very still."
+    },
+    {
+      "id": "present", "icon": "leaf", "year": "Now", "title": "Only This Moment",
+      "ref": "A meditation", "quote": "Yesterday is a memory. Tomorrow is a dream. This breath is real.",
+      "narration": "Again and again we come back to this moment. Not yesterday, not tomorrow. This breath. This one."
+    },
+    {
+      "id": "celebration", "icon": "drop", "year": "Celebration", "title": "The Drop and the Ocean",
+      "ref": "A Sufi image", "quote": "The drop does not die in the ocean. It becomes the ocean.",
+      "narration": "And we celebrate. Life is not a problem to be solved. It is a song to be sung, a dance to be danced."
+    },
+    {
+      "id": "meditation", "icon": "mountain", "year": "Meditation", "title": "Close Your Eyes",
+      "ref": "A meditation", "quote": "Do nothing. Only be.",
+      "narration": "Every long talk here ends the same way. We close our eyes together, and we do nothing at all. Come. Sit with us."
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Long video ids to render (from longform/videos/), one per line.
+# Pushing a change here starts a render; each run becomes one release you can download anywhere.
