@@ -1,1 +1,4 @@
 # What ./generate.py has made: <long|short> <id> <date>. Delete a line to make that item again.
+long the-art-of-awareness 2026-11-25
+short the-gift-not-accepted 2026-11-25
+short the-mustard-seed 2026-11-25
