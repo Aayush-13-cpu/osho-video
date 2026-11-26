@@ -40,6 +40,7 @@ for v in vs:
     assert v["template"] in art.TEMPLATES, vid
     assert len(v["chapters"]) >= 3, f"{vid}: YouTube chapters need at least 3"
     lint(vid, v["title"])
+    assert "Osho" in v["title"] and "Osho" in v["description"], f"{vid}: the title and description name Osho"
     lint(vid, v["thumbnail"])
     assert not era_hits(v["description"]), (vid, era_hits(v["description"]))
     length = sum(estimate(c) for c in v["chapters"])
@@ -53,6 +54,10 @@ for v in vs:
         lint(where, ch["title"])
         assert estimate(ch) >= 12, f"{where}: YouTube chapters must be at least 10 s"
         assert len(ch["beats"]) >= 2 and ch["title"] and ch["ref"], where  # the title card and closing card need room
+        says = " ".join(b["say"] for b in ch["beats"])
+        assert "Osho" in says or ch is last, f"{where}: every chapter ties back to Osho's teaching"
+        # a verbatim quote sits in "quotation marks" and the chapter's card names its book
+        assert '"' not in says or "Osho, " in ch["ref"], f"{where}: quote needs 'Osho, <book>' in ref"
         for b in ch["beats"]:
             lint(where, b["say"])
             assert b.get("sky", "night") in art.SKIES and b.get("land", "hills") in art.LANDS, (where, b["say"][:30])

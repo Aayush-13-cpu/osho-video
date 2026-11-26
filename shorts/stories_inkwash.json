@@ -8,7 +8,7 @@
   {"say": "The thief grabbed the robe and ran off into the dark. The monk sat down at his door, and looked up at the moon.",
    "sky": "night", "ground": "hills", "cast": [{"k": "hut", "x": 680, "s": 1.2}, {"k": "man", "x": 430, "flip": true, "acts": [{"do": "run", "to": -200, "at": 0.8, "dur": 2.6}]},
     {"k": "monk", "x": 720, "acts": [{"do": "sit", "at": 3.6}]}]},
-  {"say": "Poor fellow, he whispered. I wish I could have given him this beautiful moon. What is truly yours, no one can steal. Look up tonight.",
+  {"say": "Poor fellow, he whispered. I wish I could have given him this beautiful moon. For Osho, this is the real wealth: being, not having. Look up tonight.",
    "sky": "night", "ground": "sea", "fx": ["ripples"], "cast": [{"k": "moon", "x": 720, "y": 1180, "s": 1.1}, {"k": "monk", "x": 380, "y": 1340, "acts": [{"do": "sit"}, {"do": "breathe", "at": 1.0}]}]}
  ]},
  {"id": "the-butterfly-dream", "style": "inkwash", "genre": "tao", "title": "The Butterfly Dream", "ref": "Chuang Tzu", "beats": [
@@ -18,7 +18,7 @@
    "sky": "dawn", "ground": "hills", "cast": [{"k": "mat", "x": 540, "s": 1.6}, {"k": "elder", "x": 540, "y": 1370, "acts": [{"do": "lie"}, {"do": "stand", "at": 3.0}]}]},
   {"say": "But he could not stop wondering. Was I a man who dreamed he was a butterfly? Or am I a butterfly, dreaming now that I am a man?",
    "sky": "day", "ground": "garden", "cast": [{"k": "elder", "x": 360, "acts": [{"do": "raise", "at": 3.0}]}, {"k": "butterfly", "x": 800, "y": 960, "s": 1.2, "acts": [{"do": "fly", "to": 640, "toy": 880, "at": 1.0, "dur": 5}]}]},
-  {"say": "While you dream, the dream feels completely real. So who is the one who wakes up? Close your eyes, and look for him.",
+  {"say": "While you dream, the dream feels completely real. Osho taught: you are the witness, not the dream. Close your eyes, and look for the one who watches.",
    "sky": "night", "ground": "garden", "cast": [{"k": "seeker", "x": 540, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
  ]},
  {"id": "the-useless-tree", "style": "inkwash", "genre": "tao", "title": "The Useless Tree", "ref": "Chuang Tzu", "beats": [
@@ -28,7 +28,7 @@
    "sky": "night", "ground": "field", "cast": [{"k": "bodhi", "x": 720, "s": 0.8}, {"k": "mat", "x": 300, "s": 1.4}, {"k": "man", "x": 300, "y": 1372, "acts": [{"do": "lie"}]}]},
   {"say": "I made myself useless. That is why I am still alive. That is why I grew so big that a thousand oxen can rest in my shade.",
    "sky": "night", "ground": "field", "fx": ["fireflies"], "cast": [{"k": "bodhi", "x": 540, "s": 0.9}]},
-  {"say": "Keep one part of you useless. A part that only sings, only watches the sky. It may be the part that saves you.",
+  {"say": "Osho taught: not everything must be useful. Keep one part of you useless. A part that only sings, only watches the sky.",
    "sky": "dawn", "ground": "field", "fx": ["rays"], "cast": [{"k": "bodhi", "x": 600, "s": 0.8}, {"k": "seeker", "x": 600, "acts": [{"do": "sit", "at": 1.0}]}]}
  ]},
  {"id": "cook-dings-knife", "style": "inkwash", "genre": "tao", "title": "Cook Ding's Knife", "ref": "Chuang Tzu", "beats": [
@@ -38,7 +38,7 @@
    "sky": "day", "ground": "city", "cast": [{"k": "man", "x": 360, "acts": [{"do": "bow", "at": 2.0}]}, {"k": "elder", "x": 760, "flip": true, "acts": [{"do": "raise", "at": 0.6}, {"do": "lower", "at": 2.4}]}]},
   {"say": "Other cooks chop at the bone, and need a new knife every month. I have had this one nineteen years, and it is as sharp as the day it was made.",
    "sky": "dusk", "ground": "city", "fx": ["sparkle"], "cast": [{"k": "man", "x": 540, "acts": [{"do": "raise", "at": 4.0}]}]},
-  {"say": "Life has spaces too. Stop forcing. Feel for the opening... and move through it.",
+  {"say": "Osho taught: don't force life. Feel for the opening... and move through it.",
    "sky": "dawn", "ground": "river", "fx": ["ripples"], "cast": [{"k": "seeker", "x": 540, "acts": [{"do": "sit", "at": 1.0}]}]}
  ]},
  {"id": "the-sound-of-the-bell", "style": "inkwash", "genre": "zen", "title": "The Sound of the Bell", "ref": "A Zen story", "beats": [
@@ -48,17 +48,17 @@
    "sky": "day", "ground": "mountain", "cast": [{"k": "master", "x": 760, "flip": true, "acts": [{"do": "bless", "at": 6.0}]}, {"k": "monk", "x": 360, "acts": [{"do": "bow", "at": 3.0}]}]},
   {"say": "The next morning the boy bowed to the bell. He struck it slowly, with his whole being, and listened until the last sound faded into the hills.",
    "sky": "dawn", "ground": "mountain", "fx": ["ripples"], "cast": [{"k": "bell", "x": 720, "s": 1.0, "acts": [{"do": "rock", "amp": 3, "period": 3, "at": 3.0}]}, {"k": "monk", "x": 360, "acts": [{"do": "bow", "at": 0.6}, {"do": "reach", "at": 3.0}]}]},
-  {"say": "The master smiled. Now that is a bell. Whatever you do today, do it like that. Even one breath. Listen to it end.",
+  {"say": "The master smiled. Now that is a bell. Osho taught: be total in whatever you do. Even one breath. Listen to it end.",
    "sky": "night", "ground": "mountain", "cast": [{"k": "monk", "x": 540, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
  ]},
- {"id": "no-water-no-moon", "style": "inkwash", "genre": "zen", "title": "No Water, No Moon", "ref": "A Zen story", "beats": [
+ {"id": "no-water-no-moon", "style": "inkwash", "genre": "zen", "title": "No Water, No Moon", "ref": "A Zen story · Osho, No Water, No Moon", "beats": [
   {"say": "For years the nun Chiyono meditated, and nothing happened. Then one night she was carrying water in an old bucket, with the full moon shining in it.",
    "sky": "night", "ground": "garden", "cast": [{"k": "moon", "x": 820, "y": 1000, "s": 0.6}, {"k": "nun", "x": 160, "acts": [{"do": "walk", "to": 460, "at": 0.4, "dur": 7}]}]},
   {"say": "She walked carefully, watching the moon in the water. Suddenly the bamboo band around the bucket snapped, and the bottom fell out.",
    "sky": "night", "ground": "garden", "fx": ["ripples"], "cast": [{"k": "nun", "x": 460, "acts": [{"do": "kneel", "at": 4.0}]}]},
   {"say": "The water was gone. The moon in the water was gone. And in that instant, Chiyono was free. No water, no moon.",
    "sky": "night", "ground": "hills", "fx": ["sparkle"], "cast": [{"k": "nun", "x": 540, "acts": [{"do": "stand", "at": 2.0}, {"do": "raise", "at": 4.0}]}]},
-  {"say": "Your mind holds the reflections of everything. One day the bottom falls out. Don't be afraid. Look up. The real moon was always there.",
+  {"say": "Your mind holds the reflections of everything. One day the bottom falls out. Osho named a whole book after this moment: No Water, No Moon. Look up.",
    "sky": "night", "ground": "sea", "fx": ["ripples"], "cast": [{"k": "moon", "x": 700, "y": 1180, "s": 1.0}, {"k": "seeker", "x": 340, "acts": [{"do": "sit", "at": 2.0}]}]}
  ]},
  {"id": "the-mirror-and-the-dust", "style": "inkwash", "genre": "zen", "title": "The Mirror and the Dust", "ref": "A Zen story", "beats": [
@@ -68,7 +68,7 @@
    "sky": "dusk", "ground": "forest", "cast": [{"k": "child", "x": 540, "acts": [{"do": "raise", "at": 2.0}]}]},
   {"say": "There is no mirror. From the beginning, nothing is. Where can the dust gather? And the master chose the kitchen boy.",
    "sky": "night", "ground": "zen", "fx": ["sparkle"], "cast": [{"k": "child", "x": 360}, {"k": "master", "x": 760, "flip": true, "acts": [{"do": "bless", "at": 4.0}]}]},
-  {"say": "You don't have to polish yourself forever. You are not the mirror. You are the space it shines in. Rest there for one breath.",
+  {"say": "Osho taught: you don't have to improve yourself forever. You are not the mirror. You are the space it shines in. Rest there for one breath.",
    "sky": "dawn", "ground": "zen", "fx": ["rays"], "cast": [{"k": "child", "x": 540, "acts": [{"do": "sit", "at": 1.0}]}]}
  ]},
  {"id": "the-archer-who-stopped-aiming", "style": "inkwash", "genre": "tao", "title": "The Archer Who Stopped Aiming", "ref": "A Taoist story", "beats": [
@@ -78,7 +78,7 @@
    "sky": "day", "ground": "mountain", "cast": [{"k": "rock", "x": 820, "s": 0.6}, {"k": "elder", "x": 300, "acts": [{"do": "walk", "to": 820, "at": 0.4, "dur": 5}]}]},
   {"say": "The archer stepped to the edge, looked down, and his whole body shook. He fell to the ground, sweating, the bow forgotten.",
    "sky": "dusk", "ground": "mountain", "cast": [{"k": "samurai", "x": 540, "acts": [{"do": "rock", "amp": 4, "period": 0.5, "dur": 3}, {"do": "kneel", "at": 4.0}]}]},
-  {"say": "Your skill is in your hands, said the master. Your fear is in your mind. Relax, and it shoots itself. What are you gripping too tightly today?",
+  {"say": "Your skill is in your hands, said the master. Your fear is in your mind. Osho taught: relax, let go. What are you gripping too tightly today?",
    "sky": "dawn", "ground": "hills", "fx": ["rays"], "cast": [{"k": "samurai", "x": 540, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
  ]},
  {"id": "the-tea-master-and-the-samurai", "style": "inkwash", "genre": "zen", "title": "The Tea Master and the Samurai", "ref": "A Japanese story", "beats": [
@@ -88,17 +88,17 @@
    "sky": "dusk", "ground": "zen", "cast": [{"k": "teapot", "x": 540, "s": 1.2}, {"k": "cup", "x": 700, "s": 1.3}, {"k": "monk", "x": 330, "acts": [{"do": "sit"}, {"do": "reach", "at": 5.0}]}]},
   {"say": "Face him exactly like that, said the sword master. In the morning the tea master raised his sword, and stood utterly calm, without fear.",
    "sky": "dawn", "ground": "field", "fx": ["mist"], "cast": [{"k": "monk", "x": 340, "acts": [{"do": "raise", "at": 3.0}]}, {"k": "samurai", "x": 760, "flip": true, "acts": [{"do": "raise", "at": 1.0}]}]},
-  {"say": "The samurai found no fear to attack. He bowed, and walked away. Fear lives in tomorrow. Bring yourself completely into now.",
+  {"say": "The samurai found no fear to attack. He bowed, and walked away. Osho taught that fear always comes from the future. Be here, now.",
    "sky": "dawn", "ground": "field", "fx": ["rays"], "cast": [{"k": "monk", "x": 340, "acts": [{"do": "raise"}]}, {"k": "samurai", "x": 760, "flip": true, "acts": [{"do": "bow", "at": 1.0}, {"do": "walk", "to": 1200, "at": 3.4, "dur": 3}]}]}
  ]},
- {"id": "wash-your-bowl", "style": "inkwash", "genre": "zen", "title": "Wash Your Bowl", "ref": "A Zen story", "beats": [
+ {"id": "wash-your-bowl", "style": "inkwash", "genre": "zen", "title": "Wash Your Bowl", "ref": "A Zen story · Osho, Hyakujo: The Everest of Zen", "beats": [
   {"say": "A new monk arrived at the monastery, eager for deep teachings. Master, he said, please show me the way.",
    "sky": "day", "ground": "zen", "cast": [{"k": "master", "x": 760, "flip": true, "acts": [{"do": "sit"}]}, {"k": "monk", "x": 340, "acts": [{"do": "bow", "at": 1.6}]}]},
   {"say": "The master asked: Have you eaten your rice? Yes, said the monk. Then wash your bowl, said the master.",
    "sky": "day", "ground": "zen", "cast": [{"k": "cup", "x": 560, "s": 1.4}, {"k": "master", "x": 760, "flip": true, "acts": [{"do": "sit"}, {"do": "reach", "at": 3.0}]}, {"k": "monk", "x": 340}]},
   {"say": "The monk stood there, confused. Then, slowly, he understood. There was no special teaching. Only the bowl in front of him, and his attention.",
    "sky": "dusk", "ground": "zen", "cast": [{"k": "cup", "x": 560, "s": 1.4}, {"k": "monk", "x": 340, "acts": [{"do": "kneel", "at": 3.0}]}]},
-  {"say": "The next thing in front of you is the teaching. A cup, a dish, a step. Do it totally, and the temple is wherever you are.",
+  {"say": "Osho said: \"Any mundane activity can become meditative.\" A cup, a dish, a step. Do it totally, and the temple is wherever you are.",
    "sky": "dusk", "ground": "river", "fx": ["ripples"], "cast": [{"k": "monk", "x": 540, "acts": [{"do": "sit", "at": 1.0}]}]}
  ]}
 ]

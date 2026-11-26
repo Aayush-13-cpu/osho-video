@@ -215,7 +215,7 @@ TEMPLATE = """<!doctype html>
   #title-t {{ position: absolute; top: 250px; left: 0; right: 0; text-align: center; font: 38px "Cinzel", serif;
              letter-spacing: 8px; color: {gold}; text-transform: uppercase; text-shadow: {label_shadow}; }}
   #verse {{ z-index: 6; }}
-  #verse-t {{ position: absolute; top: 330px; left: 0; right: 0; text-align: center; font: 32px "Cinzel", serif;
+  #verse-t {{ position: absolute; top: 330px; left: 70px; right: 70px; text-align: center; font: 32px "Cinzel", serif;
              letter-spacing: 7px; color: {gold}; text-shadow: {label_shadow}; }}
 </style>
 </head>

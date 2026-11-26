@@ -14,8 +14,9 @@ VOICE, SPEED, LANG = "bm_george", 0.86, "en-gb"  # chosen by audition; a bm_/bf_
 VINTAGE = True                                   # early-1990s room-recording texture on the voice (vintage())
 W, H = 1920, 1080
 END_CARD_SUFFIX = ""  # appended to the tradition on every closing card
-DISCLAIMER = ("Independent channel. Not affiliated with or endorsed by OSHO International Foundation. "
-              "Narration is original writing, read by a synthetic voice.")
+DISCLAIMER = ("Independent channel about the teachings of Osho. Not affiliated with or endorsed by OSHO International "
+              "Foundation. OSHO is a registered trademark of OSHO International Foundation. Narration is original "
+              "commentary, read by a synthetic voice; short quotations are credited to their books.")
 
 # Words that date a script to today (the scripts must sound like a talk given around 1991). Whole words, any case,
 # with plural and -ing forms; checked by both self-tests against every say, title, chapter title and description.
@@ -28,8 +29,8 @@ BANNED_ERA_WORDS = [
     "hack", "productivity", "level up", "burnout", "mental health", "wellness", "empower", "authentic self",
     "gratitude practice", "growth mindset", "unpack", "sit with that", "process"]
 _ERA = re.compile(r"\b(?:" + "|".join(re.escape(w) + "(?:s|es|ing)?" for w in BANNED_ERA_WORDS) + r")\b", re.I)
-# The style is of the era, never of one real speaker: no names, no fake recording claims, no dates
-_IMPERSONATION = re.compile(r"osho|beloved|recorded live|\b(?:19[5-9]\d|20[0-2]\d|2030)\b", re.I)
+# The narrator talks ABOUT Osho, never AS him: no "beloved" address, no fake recording claims, no dates
+_IMPERSONATION = re.compile(r"beloved|recorded live|\b(?:19[5-9]\d|20[0-2]\d|2030)\b", re.I)
 
 
 def era_hits(text):

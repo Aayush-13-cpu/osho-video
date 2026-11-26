@@ -1,15 +1,15 @@
-{"id": "the-way-of-the-tao", "template": "tao", "title": "The Way of the Tao", "thumbnail": "The Way of the Tao",
- "description": "The old Taoists of China looked at water, at trees, at empty bowls, and learned how to live without fighting. Chuang Tzu's useless tree, Cook Ding and his knife that never went blunt, the empty hub of the wheel, the farmer who only said maybe, and the monkeys who were given three nuts in the morning. Then a meditation on letting go.",
+{"id": "the-way-of-the-tao", "template": "tao", "title": "Osho on the Way of the Tao", "thumbnail": "Osho on the Tao",
+ "description": "What Osho taught about the Tao, in plain words. The old Taoists of China looked at water, at trees, at empty bowls, and learned how to live without fighting. Chuang Tzu's useless tree, Cook Ding and his knife that never went blunt, the empty hub of the wheel, the farmer who only said maybe, and the monkeys who were given three nuts in the morning. Then a meditation on letting go.",
  "tags": ["#tao", "#taoteching", "#laotzu", "#chuangtzu", "#osho", "#meditation", "#spirituality"],
  "chapters": [
-  {"title": "The Way of the Tao", "ref": "A reflection", "beats": [
+  {"title": "Osho on the Way of the Tao", "ref": "Osho, My Way: The Way of the White Clouds", "beats": [
    {"say": "Two and a half thousand years ago, in China, an old man was leaving his country, riding on a buffalo. At the border, the guard stopped him and said: before you go, write down what you know.",
     "sky": "dawn", "land": "mountain", "cast": [{"k": "gate", "x": 1300, "s": 1.2}, {"k": "elder", "x": 500, "acts": [{"do": "walk", "to": 1100, "at": 0.4, "dur": 9}]}]},
    {"say": "That old man was Lao Tzu. And the little book he wrote that night became the Tao Te Ching. The Book of the Way.",
     "sky": "night", "land": "mountain", "cast": [{"k": "scroll", "x": 960, "s": 1.3, "acts": [{"do": "appear", "at": 1.0}]}, {"k": "candle", "x": 1250, "s": 1.3, "acts": [{"do": "flicker"}]}]},
    {"say": "The Tao cannot be explained. Lao Tzu says so on the very first page. But it can be lived. It is the way of water, the way of a tree, the way of things when you stop pushing them.",
     "sky": "day", "land": "river", "fx": ["ripples"], "cast": [{"k": "tree", "x": 1350}]},
-   {"say": "Tonight, let us walk a little way along it.",
+   {"say": "Osho gave many talks on Lao Tzu. His advice was: \"Whatsoever you are, accept it so totally that nothing is left to be achieved.\" Tonight, let us walk a little way along the Way.",
     "sky": "day", "land": "river", "cast": [{"k": "seeker", "x": 500, "y": 820, "acts": [{"do": "walk", "to": 900, "at": 0.4, "dur": 3}]}]}
   ]},
   {"title": "The Useless Tree", "ref": "Chuang Tzu", "beats": [
@@ -25,7 +25,7 @@
     "sky": "dusk", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 16}]},
    {"say": "Be useful, if you must. But keep something in you that is good for nothing. Something that only sings, only dances, only sits and watches the clouds.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "cloud", "x": 400, "y": 300, "acts": [{"do": "fly", "to": 1500, "at": 0.4, "dur": 10}]}, {"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
-   {"say": "That useless part of you is the most precious. It is the part that grows into a great tree.",
+   {"say": "Osho taught: not everything must be useful. That useless part of you is the most precious. It is the part that grows into a great tree.",
     "sky": "dawn", "land": "field", "fx": ["rays"], "cast": [{"k": "bodhi", "x": 960, "s": 1.1, "acts": [{"do": "grow", "at": 0.4}]}]}
   ]},
   {"title": "Cook Ding and the Ox", "ref": "Chuang Tzu", "beats": [
@@ -41,7 +41,7 @@
     "sky": "dusk", "land": "city", "fx": ["sparkle"], "cast": [{"k": "man", "x": 960, "acts": [{"do": "raise", "at": 8.0}]}]},
    {"say": "The prince said: from my cook, I have learned how to live.",
     "sky": "dusk", "land": "city", "cast": [{"k": "elder", "x": 960, "acts": [{"do": "bless", "at": 1.0}]}]},
-   {"say": "Life has its joints, its natural spaces. The man who fights goes blunt. The man who feels the spaces moves through life without wearing out.",
+   {"say": "Osho taught: don't fight life, flow with it. The man who fights goes blunt. The man who feels the spaces moves through life without wearing out.",
     "sky": "dawn", "land": "river", "fx": ["ripples"], "cast": [{"k": "seeker", "x": 960, "y": 820, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
   {"title": "Like Water", "ref": "Tao Te Ching 8 (Legge)", "beats": [
@@ -59,7 +59,7 @@
     "sky": "day", "land": "river", "cast": [{"k": "stones", "x": 960, "y": 880, "s": 2.0}]},
    {"say": "That is the strength of the soft. The tree that bends in the storm survives. The great hard tree that refuses to bend is the one that falls.",
     "sky": "storm", "land": "forest", "fx": ["rain"], "cast": [{"k": "bamboo", "x": 760, "s": 0.9, "acts": [{"do": "rock", "amp": 8, "period": 2.4}]}, {"k": "tree", "x": 1300, "acts": [{"do": "vanish", "at": 5.0}]}]},
-   {"say": "Be like water, my friend. Soft, low, flowing... and unstoppable.",
+   {"say": "Osho taught: be like water. Soft, low, flowing... and unstoppable.",
     "sky": "dawn", "land": "river", "fx": ["rays", "ripples"], "cast": [{"k": "seeker", "x": 960, "y": 820, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
   {"title": "The Empty Hub", "ref": "Tao Te Ching 11 (Legge)", "beats": [
@@ -73,7 +73,7 @@
     "sky": "night", "land": "city", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "raise", "at": 2.0}, {"do": "lower", "at": 5.0}]}]},
    {"say": "Meditation is making space. Not adding one more thing. Taking things out, until there is a clean, open emptiness at the centre.",
     "sky": "night", "land": "zen", "cast": [{"k": "cup", "x": 960, "s": 1.6}]},
-   {"say": "And from that empty centre, the whole wheel of your life can turn without effort.",
+   {"say": "Osho taught: find the empty centre. From there, the whole wheel of your life can turn without effort.",
     "sky": "dawn", "land": "zen", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
   ]},
   {"title": "The Farmer Who Said Maybe", "ref": "A Taoist story", "beats": [
@@ -89,7 +89,7 @@
     "sky": "night", "land": "field", "fx": ["fireflies"], "cast": [{"k": "farmer", "x": 960, "acts": [{"do": "sit", "at": 0.6}]}]},
    {"say": "We decide too quickly. This is good, this is bad. But life is much bigger than our little judgements. One event leads to another, and another, and the story is never finished.",
     "sky": "night", "land": "hills", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
-   {"say": "The farmer was not cold. He simply did not close the book after one page. Try it. The next time something happens, say: maybe. And watch.",
+   {"say": "Osho taught: don't divide life into good and bad. The farmer simply did not close the book after one page. The next time something happens, say: maybe. And watch.",
     "sky": "dawn", "land": "field", "fx": ["rays"], "cast": [{"k": "farmer", "x": 960, "acts": [{"do": "stand", "at": 1.0}]}]}
   ]},
   {"title": "Three in the Morning", "ref": "Chuang Tzu", "beats": [
@@ -101,11 +101,11 @@
     "sky": "dusk", "land": "forest", "cast": [{"k": "basket", "x": 960, "s": 1.4}]},
    {"say": "We laugh at the monkeys. But look at how we quarrel, in families, between religions, between nations, over three in the morning and four in the evening.",
     "sky": "dusk", "land": "city", "cast": [{"k": "man", "x": 760, "acts": [{"do": "raise", "at": 3.0}]}, {"k": "man", "x": 1160, "flip": true, "acts": [{"do": "raise", "at": 4.0}]}]},
-   {"say": "The wise man, says Chuang Tzu, does not fight about names. He lets the monkeys have their way, and rests in the balance of heaven.",
+   {"say": "Osho loved Chuang Tzu's humour. The wise man, says Chuang Tzu, does not fight about names. He lets the monkeys have their way, and rests in the balance of heaven.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "elder", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
   {"title": "A Meditation: Letting Go", "ref": "A meditation", "beats": [
-   {"say": "Now lie down, if you can, or sit, and let the body become heavy. Close your eyes. Let the floor hold you.",
+   {"say": "Now lie down, if you can, or sit, and let go, as Osho taught. Let the body become heavy. Close your eyes. Let the floor hold you.",
     "sky": "night", "land": "river", "cast": [{"k": "mat", "x": 960, "y": 830, "s": 1.4}, {"k": "seeker", "in": 0, "x": 0, "y": -14, "s": 0.8, "acts": [{"do": "lie"}]}]},
    {"say": "Imagine you are floating on a slow river. You don't have to swim. The water holds you. The river knows the way to the sea.",
     "sky": "night", "land": "river", "fx": ["ripples"], "cast": [{"k": "boat", "x": 500, "y": 860, "s": 0.9, "acts": [{"do": "drift", "amp": 30, "period": 8}]}]},

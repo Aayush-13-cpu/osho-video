@@ -35,6 +35,9 @@ for st in stories:
     for text in [st["title"]] + [b["say"] for b in st["beats"]]:
         assert not era_hits(text), f"{sid}: modern word(s) {era_hits(text)} in {text[:50]!r}"
         assert not impersonation_hits(text), f"{sid}: {impersonation_hits(text)} in {text[:50]!r}"
+    assert "Osho" in st["beats"][-1]["say"], f"{sid}: the closing line ties the story to Osho's teaching"
+    # a verbatim quote sits in "quotation marks" and the closing card names its book
+    assert not any('"' in b["say"] for b in st["beats"]) or "Osho, " in st["ref"], f"{sid}: quote needs 'Osho, <book>' in ref"
     for b in st["beats"]:
         assert b.get("sky", "day") in kit.SKIES and b.get("ground", "hills") in kit.GROUNDS, sid
         assert set(b.get("fx", [])) <= kit.FX, (sid, b.get("fx"))

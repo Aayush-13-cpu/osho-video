@@ -1,15 +1,15 @@
-{"id": "sufi-tales-of-the-heart", "template": "sufi", "title": "Sufi Tales of the Heart", "thumbnail": "Sufi Tales of the Heart",
- "description": "The Sufis never argued. They told stories and they danced. The whirling that turns around a still centre, Mulla Nasruddin searching for the donkey he is sitting on, Rabia running through the streets with fire and water, the king's ring that said: this too shall pass, and the moth that loved the flame. Then a gentle turning meditation.",
+{"id": "sufi-tales-of-the-heart", "template": "sufi", "title": "Osho and the Sufi Tales of the Heart", "thumbnail": "Osho's Sufi Tales",
+ "description": "What Osho taught about the Sufis, in plain words. The Sufis never argued. They told stories and they danced. The whirling that turns around a still centre, Mulla Nasruddin searching for the donkey he is sitting on, Rabia running through the streets with fire and water, the king's ring that said: this too shall pass, and the moth that loved the flame. Then a gentle turning meditation.",
  "tags": ["#sufi", "#rumi", "#nasruddin", "#osho", "#whirling", "#meditation", "#spirituality"],
  "chapters": [
-  {"title": "Sufi Tales of the Heart", "ref": "A reflection", "beats": [
+  {"title": "Osho and the Sufi Tales of the Heart", "ref": "Osho, Come, Come, Yet Again Come", "beats": [
    {"say": "The Sufis are the mystics of the heart. They don't argue about God. They don't build big systems of philosophy. They tell jokes, they sing, they dance in circles until they disappear.",
     "sky": "dusk", "land": "desert", "cast": [{"k": "dancer", "x": 960, "acts": [{"do": "whirl", "at": 4.0}]}]},
    {"say": "People thought they were mad. And they were, a little. Mad with love.",
     "sky": "dusk", "land": "desert", "cast": [{"k": "dancer", "x": 960, "acts": [{"do": "whirl"}]}]},
-   {"say": "Their stories travelled from Persia to India, from caravan to caravan, from tea house to tea house. Nobody knows who first told them. They belong to everyone.",
+   {"say": "Osho told these stories for years. Nobody knows who first told them. They travelled from Persia to India, from tea house to tea house. They belong to everyone.",
     "sky": "night", "land": "desert", "cast": [{"k": "donkey", "x": 500, "acts": [{"do": "walk", "to": 1400, "at": 0.4, "dur": 10}]}, {"k": "man", "x": 400, "acts": [{"do": "walk", "to": 1300, "at": 0.4, "dur": 10}]}]},
-   {"say": "So sit back, as if you are in an old tea house in the evening, and listen.",
+   {"say": "Osho said: \"Meditate so that you can feel immense silence, and love so that your life can become a song, a dance, a celebration.\" That is the Sufi way. So sit back, and listen.",
     "sky": "night", "land": "city", "cast": [{"k": "teapot", "x": 1100, "s": 1.3}, {"k": "cup", "x": 1250, "s": 1.3}, {"k": "seeker", "x": 820, "acts": [{"do": "sit", "at": 0.6}]}]}
   ]},
   {"title": "The Turning", "ref": "A Sufi tradition", "beats": [
@@ -23,7 +23,7 @@
     "sky": "dusk", "land": "desert", "cast": [{"k": "stone", "x": 960, "s": 1.6, "acts": [{"do": "roll", "to": 960, "deg": 360, "at": 0.4, "dur": 8}]}]},
    {"say": "Your life is turning too. Office, home, family, bills, round and round. You don't need to stop the wheel. You need to find the centre.",
     "sky": "dusk", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 14}]},
-   {"say": "And when the turning stops, the dervish falls to the earth, and lies there like a child in its mother's lap. Utterly empty. Utterly at home.",
+   {"say": "Osho turned this whirling into a meditation. When the turning stops, the dervish falls to the earth, like a child in its mother's lap. Utterly empty. Utterly at home.",
     "sky": "dawn", "land": "desert", "fx": ["rays"], "cast": [{"k": "dancer", "x": 960, "acts": [{"do": "lie", "at": 0.0}]}]}
   ]},
   {"title": "Nasruddin Looks for His Donkey", "ref": "A Nasruddin story", "beats": [
@@ -37,7 +37,7 @@
     "sky": "dusk", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 14, "acts": [{"do": "rock", "amp": 3, "period": 0.6}]}]},
    {"say": "We are all galloping on the donkey we are searching for. We are searching for happiness, for God, for peace... and we are sitting on it.",
     "sky": "night", "land": "desert", "cast": [{"k": "donkey", "x": 600, "acts": [{"do": "walk", "to": 1300, "at": 0.4, "dur": 9}]}, {"k": "seeker", "in": 0, "x": 0, "y": -130, "s": 0.7}]},
-   {"say": "Stop. Look down. What you are looking for is the very thing that is looking.",
+   {"say": "Osho loved Mulla Nasruddin. Stop. Look down. What you are looking for is the very thing that is looking.",
     "sky": "dawn", "land": "desert", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
   {"title": "Rabia's Fire and Water", "ref": "A Sufi tale (Rabia)", "beats": [
@@ -57,7 +57,7 @@
     "sky": "dusk", "land": "hills", "cast": [{"k": "hut", "x": 1300, "s": 1.1}, {"k": "woman", "x": 800, "acts": [{"do": "kneel"}, {"do": "stand", "at": 3.0}]}, {"k": "crowd", "x": 450, "n": 5}]},
    {"say": "Strange. The same story we tell about Mulla Nasruddin and his key, she told about the needle. Truth keeps coming back in new clothes, until somebody listens.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "lamp", "x": 960, "s": 1.6, "acts": [{"do": "flicker"}]}]},
-   {"say": "Rabia's prayer was different. She asked for nothing. She only said: let me love you, and that is enough. That is the heart of the Sufi way.",
+   {"say": "Osho often spoke of Rabia. She asked for nothing. She only said: let me love you, and that is enough. That is the heart of the Sufi way.",
     "sky": "dawn", "land": "desert", "fx": ["rays"], "cast": [{"k": "woman", "x": 960, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
   ]},
   {"title": "This Too Shall Pass", "ref": "A Sufi tale", "beats": [
@@ -73,7 +73,7 @@
     "sky": "day", "land": "city", "fx": ["petals"], "cast": [{"k": "crowd", "x": 960, "n": 16, "acts": [{"do": "rock", "amp": 3, "period": 0.8}]}, {"k": "elder", "x": 960, "y": 820, "acts": [{"do": "raise"}]}]},
    {"say": "This too shall pass. And the king became quiet, and humble, in the middle of his success.",
     "sky": "dusk", "land": "city", "cast": [{"k": "elder", "x": 960, "acts": [{"do": "lower", "at": 2.0}, {"do": "sit", "at": 4.0}]}]},
-   {"say": "Everything passes. Pain and pleasure, praise and blame. Only one thing does not pass: the one who watches them come and go.",
+   {"say": "Osho taught: everything passes. Pain and pleasure, praise and blame. Only one thing does not pass: the one who watches them come and go.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
   {"title": "Nasruddin Gives a Sermon", "ref": "A Nasruddin story", "beats": [
@@ -89,7 +89,7 @@
     "sky": "dusk", "land": "city", "cast": [{"k": "nasruddin", "x": 960, "acts": [{"do": "bless", "at": 1.0}, {"do": "walk", "to": 1700, "at": 4.0, "dur": 3}]}]},
    {"say": "We laugh at him. But he is saying something very deep. Truth cannot be given in a sermon. Those who know, know. Those who don't, must find it for themselves.",
     "sky": "night", "land": "city", "cast": [{"k": "lamp", "x": 960, "s": 1.6, "acts": [{"do": "flicker"}]}]},
-   {"say": "No mosque, no temple, no teacher can do your seeing for you. At most, a finger can point.",
+   {"say": "Osho taught: no mosque, no temple, no teacher can do your seeing for you. At most, a finger can point.",
     "sky": "night", "land": "sea", "cast": [{"k": "moon", "x": 1300, "y": 640, "s": 0.8}, {"k": "seeker", "x": 700, "acts": [{"do": "reach", "at": 1.0}]}]}
   ]},
   {"title": "The Moth and the Flame", "ref": "A Sufi image (Attar)", "beats": [
@@ -101,11 +101,11 @@
     "sky": "night", "land": "city", "fx": ["sparkle"], "cast": [{"k": "candle", "x": 960, "s": 1.6, "acts": [{"do": "flicker"}]}, {"k": "butterfly", "x": 600, "y": 500, "s": 0.6, "acts": [{"do": "fly", "to": 960, "toy": 640, "at": 2.0, "dur": 3}, {"do": "vanish", "at": 5.0}]}]},
    {"say": "This is what the Sufis mean by love. Not standing at a safe distance and admiring the light. Falling into it, and disappearing.",
     "sky": "night", "land": "desert", "cast": [{"k": "fire", "x": 960, "s": 1.6, "acts": [{"do": "flicker"}]}]},
-   {"say": "It sounds frightening. But what burns is only the small self, the ego, the little moth with its opinions. What remains is the flame.",
+   {"say": "It sounds frightening. But Osho taught that what burns is only the ego, the little moth with its opinions. What remains is the flame.",
     "sky": "dawn", "land": "desert", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
   {"title": "A Meditation: The Still Centre", "ref": "A meditation", "beats": [
-   {"say": "Now let us try a small turning. If you have space, stand up. Raise one hand gently, and begin to turn slowly on the spot, the way a child turns in the garden.",
+   {"say": "Now let us try a small turning, in the spirit of Osho's whirling meditation. If you have space, stand up. Raise one hand gently, and begin to turn slowly on the spot.",
     "sky": "night", "land": "desert", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "raise", "at": 3.0}, {"do": "whirl", "at": 6.0}]}]},
    {"say": "Keep the eyes soft and open. Don't look at anything. Let the world become a blur of colour and light around you.",
     "sky": "night", "land": "desert", "fx": ["sparkle"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "whirl"}]}]},

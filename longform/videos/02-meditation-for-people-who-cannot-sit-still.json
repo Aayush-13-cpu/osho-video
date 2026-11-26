@@ -1,16 +1,16 @@
-{"id": "meditation-for-people-who-cannot-sit-still", "template": "maroon", "title": "Meditation for People Who Cannot Sit Still",
- "thumbnail": "For People Who Cannot Sit Still",
- "description": "If you have ever closed your eyes to meditate and found the whole marketplace rushing in, this one is for you. The drunken monkey of the mind, a child who dances until he falls asleep, the archer who stopped aiming, and the monk who was told to wash his bowl. Then a meditation to shake out the day and fall into stillness.",
+{"id": "meditation-for-people-who-cannot-sit-still", "template": "maroon", "title": "Osho on Meditation for People Who Cannot Sit Still",
+ "thumbnail": "Can't Sit Still? Osho's Way",
+ "description": "What Osho taught about meditation for restless people, in plain words. If you have ever closed your eyes to meditate and found the whole marketplace rushing in, this one is for you. The drunken monkey of the mind, a child who dances until he falls asleep, the archer who stopped aiming, and the monk who was told to wash his bowl. Then a meditation to shake out the day and fall into stillness.",
  "tags": ["#meditation", "#restlessmind", "#zen", "#osho", "#spirituality", "#mindfulness", "#dance"],
  "chapters": [
-  {"title": "Meditation for People Who Cannot Sit Still", "ref": "A reflection", "beats": [
+  {"title": "Osho on Meditation for People Who Cannot Sit Still", "ref": "Osho, Walking in Zen, Sitting in Zen", "beats": [
    {"say": "You have tried it, haven't you? You sat down, you closed your eyes, you decided to be silent... and within one minute the whole marketplace came rushing in.",
     "sky": "night", "land": "city", "cast": [{"k": "candle", "x": 1250, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 900, "acts": [{"do": "sit", "at": 0.6}]}]},
    {"say": "Your legs began to ache. You remembered the electricity bill. You remembered something your mother said twenty years ago. And you thought: meditation is not for me.",
     "sky": "night", "land": "city", "cast": [{"k": "candle", "x": 1250, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 900, "acts": [{"do": "sit"}, {"do": "stand", "at": 8.0}]}]},
-   {"say": "My friend, meditation is for you. But perhaps not in the way you were told. You were told to sit still. Nobody told you that first you have to get tired of moving.",
+   {"say": "Osho saw this clearly. Meditation is for you, but perhaps not in the way you were told. You were told to sit still. Nobody told you that first you have to get tired of moving.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "seeker", "x": 500, "acts": [{"do": "walk", "to": 1300, "at": 0.4, "dur": 10}]}]},
-   {"say": "So tonight we start from where you are. Restless, busy, full of energy. That restlessness is not your enemy. It is the door.",
+   {"say": "He said of meditation: \"You have to sit in it, you have to walk in it. Yes, you have even to sleep in it.\" So tonight we start from where you are. Restless, busy. That restlessness is the door.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "gate", "x": 1300, "s": 1.2}, {"k": "seeker", "x": 600, "acts": [{"do": "walk", "to": 1300, "at": 3.0, "dur": 5}]}]}
   ]},
   {"title": "The Drunken Monkey", "ref": "An Indian image", "beats": [
@@ -24,7 +24,7 @@
     "sky": "dusk", "land": "forest", "cast": [{"k": "master", "x": 1250, "flip": true, "acts": [{"do": "sit", "at": 0.4}]}, {"k": "seeker", "x": 760, "acts": [{"do": "rock", "amp": 8, "period": 1.0}]}]},
    {"say": "After some time the monkey gets tired. Nobody is fighting it, nobody is chasing it. And a tired monkey sits down by itself.",
     "sky": "night", "land": "forest", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 2.0}, {"do": "breathe", "at": 3.0}]}]},
-   {"say": "That is the whole secret. Not control. Tiredness, and then watching. Let the energy move first... and the stillness comes on its own, like evening after a long hot day.",
+   {"say": "That is the whole secret of Osho's active meditations. Not control. Tiredness, and then watching. Let the energy move first... and the stillness comes on its own, like evening after a long hot day.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]}
   ]},
   {"title": "First Dance, Then Sit", "ref": "A reflection", "beats": [
@@ -38,7 +38,7 @@
     "sky": "night", "land": "city", "cast": [{"k": "house", "x": 1350, "s": 1.2}, {"k": "seeker", "x": 800, "acts": [{"do": "dance"}]}]},
    {"say": "Then, when you are tired, stop. Suddenly. Sit down on the floor and close your eyes. And now see... how silent it is inside.",
     "sky": "night", "land": "zen", "fx": ["mist"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 2.0}]}]},
-   {"say": "The dance has cleaned the house. Now the guest can come. Silence is the guest... and it only comes to a house that is empty and clean.",
+   {"say": "This is why Osho's meditations so often begin with dancing. The dance has cleaned the house. Now the guest can come. Silence is the guest... and it only comes to a house that is empty and clean.",
     "sky": "night", "land": "zen", "cast": [{"k": "candle", "x": 1250, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]}
   ]},
   {"title": "The Archer Who Stopped Aiming", "ref": "A Taoist story", "beats": [
@@ -52,7 +52,7 @@
     "sky": "dusk", "land": "mountain", "cast": [{"k": "elder", "x": 1300, "flip": true}, {"k": "samurai", "x": 900, "acts": [{"do": "rock", "amp": 4, "period": 0.5, "dur": 4}, {"do": "kneel", "at": 6.0}]}]},
    {"say": "The old man laughed gently. Your skill is in your hands, he said. But your mind is full of fear. A man who is truly at ease does not need to aim. He hits.",
     "sky": "dusk", "land": "mountain", "cast": [{"k": "elder", "x": 1300, "flip": true, "acts": [{"do": "bless", "at": 1.0}]}, {"k": "samurai", "x": 900, "acts": [{"do": "kneel"}]}]},
-   {"say": "Tension is not concentration. The more you try, the more you miss. Relax... and you will be surprised how much happens through you.",
+   {"say": "Osho taught: tension is not concentration. The more you try, the more you miss. Relax... and you will be surprised how much happens through you.",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "samurai", "x": 960, "acts": [{"do": "sit", "at": 0.6}, {"do": "breathe", "at": 1.6}]}]}
   ]},
   {"title": "Walking Meditation", "ref": "A Buddhist practice", "beats": [
@@ -66,10 +66,10 @@
     "sky": "day", "land": "city", "cast": [{"k": "crowd", "x": 1100, "n": 10}, {"k": "man", "x": 400, "acts": [{"do": "walk", "to": 900, "at": 0.4, "dur": 9}]}]},
    {"say": "And one day you will notice that the walking is happening, and you are only watching it. The body walks... and you are still.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "seeker", "x": 500, "acts": [{"do": "walk", "to": 1300, "at": 0.4, "dur": 9}]}]},
-   {"say": "That stillness in the middle of movement is the real meditation. It is not in the sitting. It is in the watching.",
+   {"say": "Osho taught that this stillness in the middle of movement is the real meditation. It is not in the sitting. It is in the watching.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "seeker", "x": 1300, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
   ]},
-  {"title": "Then Wash Your Bowl", "ref": "A Zen story", "beats": [
+  {"title": "Then Wash Your Bowl", "ref": "A Zen story · Osho, Hyakujo: The Everest of Zen", "beats": [
    {"say": "A new monk came to the monastery and said to the master: I have just arrived. Please, teach me.",
     "sky": "day", "land": "zen", "cast": [{"k": "master", "x": 1200, "flip": true, "acts": [{"do": "sit"}]}, {"k": "monk", "x": 700, "acts": [{"do": "bow", "at": 2.0}]}]},
    {"say": "The master asked: Have you eaten your breakfast? Yes, said the monk. Then go and wash your bowl, said the master. And the monk understood.",
@@ -78,7 +78,7 @@
     "sky": "day", "land": "zen", "cast": [{"k": "cup", "x": 960, "s": 1.4}, {"k": "monk", "x": 700, "acts": [{"do": "reach", "at": 2.0}]}]},
    {"say": "The restless mind always wants the next thing, the big thing, the spiritual thing. And the bowl is sitting there, dirty, waiting for you.",
     "sky": "dusk", "land": "zen", "cast": [{"k": "cup", "x": 960, "s": 1.6}]},
-   {"say": "Wash it with your whole being. Feel the water, feel the bowl. And you will find that the temple was always in the kitchen.",
+   {"say": "Osho said: \"Any mundane activity can become meditative.\" Wash the bowl with your whole being. And you will find that the temple was always in the kitchen.",
     "sky": "dusk", "land": "river", "fx": ["ripples"], "cast": [{"k": "monk", "x": 800, "acts": [{"do": "kneel", "at": 1.0}, {"do": "reach", "at": 2.4}]}]}
   ]},
   {"title": "Humming Like a Bee", "ref": "A meditation", "beats": [
@@ -90,7 +90,7 @@
     "sky": "night", "land": "field", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},
    {"say": "Then stop. And in the moment after the sound, listen. The silence will be so alive... you can almost touch it.",
     "sky": "night", "land": "sea", "fx": ["ripples"], "cast": [{"k": "seeker", "x": 700, "y": 820, "acts": [{"do": "sit"}]}]},
-   {"say": "Sound is a boat. Silence is the other shore. Use the boat... and then leave it on the bank.",
+   {"say": "Osho made humming into a whole meditation, Nadabrahma. Sound is a boat. Silence is the other shore. Use the boat... and then leave it on the bank.",
     "sky": "dawn", "land": "sea", "fx": ["rays"], "cast": [{"k": "boat", "x": 1100, "y": 860, "s": 1.0, "acts": [{"do": "rock", "amp": 2, "period": 4}]}]}
   ]},
   {"title": "The Restless Ones Are Lucky", "ref": "A reflection", "beats": [
@@ -102,11 +102,11 @@
     "sky": "dusk", "land": "hills", "cast": [{"k": "seeker", "x": 400, "acts": [{"do": "walk", "to": 1500, "at": 0.4, "dur": 9}]}]},
    {"say": "A dead horse goes nowhere. A wild horse, once it trusts you, can take you to the farthest mountain.",
     "sky": "dusk", "land": "mountain", "cast": [{"k": "gate", "x": 1400, "s": 1.1}, {"k": "seeker", "x": 600, "acts": [{"do": "walk", "to": 1300, "at": 0.6, "dur": 7}]}]},
-   {"say": "So don't be ashamed of your restlessness. It is not a disease. It is a thirst... and thirst is the beginning of every search.",
+   {"say": "Osho never asked anyone to be ashamed of restlessness. It is not a disease. It is a thirst... and thirst is the beginning of every search.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
   ]},
   {"title": "A Meditation: Shake, Then Be Still", "ref": "A meditation", "beats": [
-   {"say": "Now let us try it together. Stand up, if you can. Let your arms hang loose. And close your eyes.",
+   {"say": "Now let us try something in the spirit of Osho's Kundalini meditation. Stand up, if you can. Let your arms hang loose. And close your eyes.",
     "sky": "night", "land": "zen", "cast": [{"k": "candle", "x": 1300, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 900}]},
    {"say": "Begin to shake. Start with the hands. Then let the shaking go into the arms, the shoulders, the whole body. Don't do it. Let it happen.",
     "sky": "night", "land": "zen", "cast": [{"k": "candle", "x": 1300, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 900, "acts": [{"do": "rock", "amp": 3, "period": 0.4, "dur": 3}, {"do": "dance", "at": 3.4}]}]},

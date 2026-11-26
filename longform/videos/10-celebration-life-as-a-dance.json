@@ -1,15 +1,15 @@
-{"id": "celebration-life-as-a-dance", "template": "satori", "title": "Celebration: Life as a Dance", "thumbnail": "Life as a Dance",
- "description": "Religion has been made so serious. But the mystics laughed, and sang, and danced. Three monks who only laughed, a cracked pot that watered the flowers, children playing in a burning house, Chuang Tzu drumming and singing after his wife died, and a Zen master whose only miracle was eating when hungry. Then a meditation of dancing into silence.",
+{"id": "celebration-life-as-a-dance", "template": "satori", "title": "Osho on Celebration: Life as a Dance", "thumbnail": "Osho: Life as a Dance",
+ "description": "What Osho taught about celebration, in plain words. Religion has been made so serious. But the mystics laughed, and sang, and danced. Three monks who only laughed, a cracked pot that watered the flowers, children playing in a burning house, Chuang Tzu drumming and singing after his wife died, and a Zen master whose only miracle was eating when hungry. Then a meditation of dancing into silence.",
  "tags": ["#celebration", "#joy", "#dance", "#osho", "#zen", "#meditation", "#spirituality"],
  "chapters": [
-  {"title": "Celebration: Life as a Dance", "ref": "A reflection", "beats": [
+  {"title": "Osho on Celebration: Life as a Dance", "ref": "Osho, The Book of Wisdom", "beats": [
    {"say": "Go into any temple, any church, any mosque. Look at the faces. So serious. So sad. As if God is a strict headmaster, and life is an examination you are going to fail.",
     "sky": "day", "land": "city", "cast": [{"k": "pagoda", "x": 1350, "s": 1.1}, {"k": "crowd", "x": 750, "n": 12}]},
    {"say": "But look at a tree in spring. Look at a river after the rain. Look at a child on the first day of the holidays. Existence is not serious. It is celebrating.",
     "sky": "day", "land": "garden", "fx": ["petals"], "cast": [{"k": "tree", "x": 1300}, {"k": "child", "x": 800, "acts": [{"do": "dance", "at": 4.0}]}]},
    {"say": "The flowers are not working hard. The birds are not worried about tomorrow. They are simply here, singing.",
     "sky": "dawn", "land": "field", "cast": [{"k": "birds", "x": 400, "y": 300, "acts": [{"do": "fly", "to": 1500, "toy": 260, "at": 0.4, "dur": 8}]}, {"k": "plant", "x": 960, "s": 1.6}]},
-   {"say": "Tonight, let us talk about the religion of joy. And at the end, let us dance.",
+   {"say": "Osho said: \"Ecstasy is our very nature, not to be ecstatic is simply unnecessary.\" Tonight, let us talk about the religion of joy. And at the end, let us dance.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "dancer", "x": 960, "acts": [{"do": "dance", "at": 1.0}]}]}
   ]},
   {"title": "The Three Laughing Monks", "ref": "A Chinese story", "beats": [
@@ -25,7 +25,7 @@
     "sky": "night", "land": "city", "cast": [{"k": "monk", "x": 760, "acts": [{"do": "raise", "at": 1.0}]}, {"k": "monk", "x": 1160, "acts": [{"do": "raise", "at": 1.4}]}]},
    {"say": "And when the body was put on the fire, there was one more surprise. The dead monk had told his friends: don't change my clothes. And he had filled his pockets with fireworks.",
     "sky": "night", "land": "field", "fx": ["sparkle"], "cast": [{"k": "fire", "x": 960, "s": 1.8, "acts": [{"do": "flicker"}]}, {"k": "crowd", "x": 960, "y": 900, "n": 14}]},
-   {"say": "Even his death was a joke. Even his death was a celebration. The whole village laughed until morning.",
+   {"say": "Osho loved this story. Even his death was a joke. Even his death was a celebration. The whole village laughed until morning.",
     "sky": "dawn", "land": "field", "fx": ["rays"], "cast": [{"k": "crowd", "x": 960, "n": 16, "acts": [{"do": "rock", "amp": 3, "period": 0.8}]}]}
   ]},
   {"title": "The Cracked Pot", "ref": "An Indian fable", "beats": [
@@ -41,7 +41,7 @@
     "sky": "day", "land": "garden", "fx": ["petals"], "cast": [{"k": "plant", "x": 500, "s": 1.2}, {"k": "plant", "x": 800, "s": 1.4}, {"k": "plant", "x": 1100, "s": 1.2}, {"k": "lotus", "x": 1400, "s": 1.4}]},
    {"say": "I knew about your crack, said the water carrier. So I planted seeds on your side. Every day you have been watering them. Without you, there would be no flowers on the master's table.",
     "sky": "day", "land": "garden", "cast": [{"k": "table", "x": 1200, "s": 1.2}, {"k": "farmer", "x": 750, "acts": [{"do": "reach", "at": 3.0}]}]},
-   {"say": "Your cracks are not your failure. Stop hiding them. Something is growing through them that the perfect ones will never know.",
+   {"say": "Osho taught: accept yourself totally. Your cracks are not your failure. Something is growing through them that the perfect ones will never know.",
     "sky": "dawn", "land": "garden", "fx": ["rays", "petals"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "raise", "at": 3.0}]}]}
   ]},
   {"title": "The Burning House", "ref": "A Buddhist parable", "beats": [
@@ -57,7 +57,7 @@
     "sky": "night", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 14}]},
    {"say": "The masters say many things to get us out. Heaven, peace, enlightenment. These are the toys at the gate.",
     "sky": "night", "land": "hills", "cast": [{"k": "gate", "x": 960, "s": 1.2}]},
-   {"say": "But what is really waiting outside is simply the open sky. And the joy of being alive under it.",
+   {"say": "Osho taught: what is really waiting outside is simply the open sky. And the joy of being alive under it.",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "gate", "x": 960, "s": 1.2}, {"k": "child", "x": 960, "acts": [{"do": "dance", "at": 1.0}]}]}
   ]},
   {"title": "Chuang Tzu Sings", "ref": "Chuang Tzu", "beats": [
@@ -71,10 +71,10 @@
     "sky": "dusk", "land": "forest", "fx": ["petals"], "cast": [{"k": "elder", "x": 960, "acts": [{"do": "sit"}]}]},
    {"say": "If I went on sobbing and wailing, it would show that I understand nothing. So I stopped. And I sing.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "drum", "x": 900, "s": 1.2}, {"k": "elder", "x": 760, "acts": [{"do": "sit"}, {"do": "raise", "at": 2.0}]}]},
-   {"say": "Celebration is not ignoring death. It is seeing life so deeply that even death becomes a part of the dance.",
+   {"say": "Osho taught: celebration is not ignoring death. It is seeing life so deeply that even death becomes a part of the dance.",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
-  {"title": "The Real Miracle", "ref": "A Zen story", "beats": [
+  {"title": "The Real Miracle", "ref": "A Zen story · Osho, Hyakujo: The Everest of Zen", "beats": [
    {"say": "The Zen master Bankei was giving a talk to a crowd of farmers, when a priest from another sect pushed his way to the front. Our founder could do miracles, he boasted. What miracles can you do?",
     "sky": "day", "land": "zen", "cast": [{"k": "master", "x": 1200, "flip": true, "acts": [{"do": "sit"}]}, {"k": "crowd", "x": 700, "n": 10}, {"k": "man", "x": 900, "acts": [{"do": "raise", "at": 6.0}]}]},
    {"say": "He could stand on one side of the river, holding a brush, and his disciple on the other side holding paper, and he could write a holy name across the water in the air!",
@@ -87,7 +87,7 @@
     "sky": "dusk", "land": "city", "cast": [{"k": "table", "x": 960, "s": 1.3}, {"k": "man", "x": 760, "acts": [{"do": "reach", "at": 2.0}]}]},
    {"say": "The priest went away angry. But the farmers stayed. They understood Bankei better than any scholar, because they lived close to the earth, eating when hungry, sleeping when tired.",
     "sky": "dusk", "land": "zen", "cast": [{"k": "man", "x": 900, "acts": [{"do": "walk", "to": 1700, "at": 0.4, "dur": 4}]}, {"k": "crowd", "x": 700, "n": 10}]},
-   {"say": "To be totally where you are, doing what you are doing... that is the real miracle. And it is available to you every single moment.",
+   {"say": "Osho said: \"Your every act should be a ceremony.\" To be totally where you are, doing what you are doing... that is the real miracle.",
     "sky": "dawn", "land": "garden", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
   ]},
   {"title": "The Dance of the Ordinary", "ref": "A reflection", "beats": [
@@ -103,11 +103,11 @@
     "sky": "day", "land": "field", "cast": [{"k": "woman", "x": 700, "acts": [{"do": "bow", "at": 2.0}]}, {"k": "woman", "x": 1000, "acts": [{"do": "bow", "at": 3.0}]}, {"k": "basket", "x": 1300, "s": 1.2}]},
    {"say": "They have not read any books about celebration. They simply know that a song makes the field lighter.",
     "sky": "dusk", "land": "field", "cast": [{"k": "woman", "x": 700, "acts": [{"do": "dance", "at": 1.0}]}, {"k": "woman", "x": 1000, "acts": [{"do": "dance", "at": 1.4}]}]},
-   {"say": "Existence is dancing all around you. Join in.",
+   {"say": "Osho taught: life is a celebration. Existence is dancing all around you. Join in.",
     "sky": "night", "land": "field", "fx": ["fireflies"], "cast": [{"k": "dancer", "x": 960, "acts": [{"do": "whirl", "at": 1.0}]}]}
   ]},
   {"title": "A Meditation: Dance, Then Silence", "ref": "A meditation", "beats": [
-   {"say": "Now let us end the way we began. Stand up, if you can. Let the body loosen. And close your eyes.",
+   {"say": "Now let us end the way Osho's Nataraj meditation does: dance, then silence. Stand up, if you can. Let the body loosen. And close your eyes.",
     "sky": "night", "land": "field", "cast": [{"k": "seeker", "x": 960}]},
    {"say": "Begin to move. Any way the body wants. Sway, shake, bend, turn. Don't make a dance. Let the dance make you.",
     "sky": "night", "land": "field", "fx": ["sparkle"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "dance", "at": 1.0}]}]},

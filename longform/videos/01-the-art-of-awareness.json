@@ -1,15 +1,15 @@
-{"id": "the-art-of-awareness", "template": "saffron", "title": "The Art of Awareness", "thumbnail": "The Art of Awareness",
- "description": "Stories from Zen and the Sufis about the simplest and the most difficult thing of all: to be awake. A man who walks through his life asleep, the master who wrote one word, the musk deer, and Mulla Nasruddin searching for his key under the lamp. Then a guided meditation to close, so you can taste it yourself.",
+{"id": "the-art-of-awareness", "template": "saffron", "title": "Osho on Awareness: The Art of Being Awake", "thumbnail": "Osho on Awareness",
+ "description": "What Osho taught about awareness, in plain words. Stories from Zen and the Sufis about the simplest and the most difficult thing of all: to be awake. A man who walks through his life asleep, the master who wrote one word, the musk deer, and Mulla Nasruddin searching for his key under the lamp. Then a guided meditation to close, so you can taste it yourself.",
  "tags": ["#meditation", "#awareness", "#zen", "#osho", "#spirituality", "#mindfulness", "#witnessing"],
  "chapters": [
-  {"title": "The Art of Awareness", "ref": "A reflection", "beats": [
-   {"say": "My friend, you have woken up every morning of your life. You opened your eyes, you got up, you went to work. And yet... have you ever really been awake?",
+  {"title": "Osho on Awareness: The Art of Being Awake", "ref": "Osho, Walking in Zen, Sitting in Zen", "beats": [
+   {"say": "Of everything Osho taught, one thing comes back again and again: awareness. You have woken up every morning of your life. And yet... have you ever really been awake?",
     "sky": "dawn", "land": "hills", "cast": [{"k": "man", "x": 600, "acts": [{"do": "walk", "to": 1100, "at": 0.4, "dur": 7}]}]},
    {"say": "Not awake like the eyes. Awake like a lamp that is lit inside the house. Most of us live in a dark house... and we call it living.",
     "sky": "night", "land": "city", "cast": [{"k": "house", "x": 960, "s": 1.3}, {"k": "lamp", "x": 960, "y": 800, "s": 1.4, "acts": [{"do": "flicker", "at": 3.0}]}]},
-   {"say": "Tonight I will tell you a few stories. Old ones, from Zen, and from the Sufis. And at the end we will sit together, close our eyes, and do nothing at all.",
+   {"say": "In one of his Zen talks he put it simply: \"One has to reach to the absolute state of awareness: that is Zen.\" Tonight, a few of the old stories he loved to tell, from Zen and from the Sufis.",
     "sky": "night", "land": "field", "fx": ["fireflies"], "cast": [{"k": "master", "x": 1180, "flip": true, "acts": [{"do": "sit", "at": 1.0}]}, {"k": "seeker", "x": 760, "acts": [{"do": "sit", "at": 2.0}]}]},
-   {"say": "So don't try to understand. Understanding is the work of the mind. Just listen... the way you listen to the rain on the roof.",
+   {"say": "And at the end we will sit together, and do nothing at all. So don't try to understand. Just listen... the way you listen to the rain on the roof.",
     "sky": "storm", "land": "city", "fx": ["rain"], "cast": [{"k": "hut", "x": 960, "s": 1.4}]}
   ]},
   {"title": "The Man Who Walks Asleep", "ref": "A reflection", "beats": [
@@ -23,7 +23,7 @@
     "sky": "dusk", "land": "city", "cast": [{"k": "table", "x": 960, "s": 1.3}, {"k": "man", "x": 700, "acts": [{"do": "reach", "at": 1.0}, {"do": "lower", "at": 4.0}]}]},
    {"say": "This is how a whole life passes. Seventy years, eighty years... and the man was never at home. Somebody else was living in his house.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "elder", "x": 600, "acts": [{"do": "walk", "to": 1300, "at": 0.6, "dur": 10}]}]},
-   {"say": "Don't laugh at him. Just look a little closer... and you will find his face in your own mirror.",
+   {"say": "Osho said again and again: man is asleep. Don't laugh at him. Look a little closer... and you will find his face in your own mirror.",
     "sky": "night", "land": "city", "fx": ["sparkle"], "cast": [{"k": "mirror", "x": 1100, "s": 1.3}, {"k": "man", "x": 820, "acts": [{"do": "reach", "at": 2.0}]}]}
   ]},
   {"title": "Attention, Attention, Attention", "ref": "A Zen story", "beats": [
@@ -37,7 +37,7 @@
     "sky": "dusk", "land": "zen", "cast": [{"k": "master", "x": 1180, "flip": true, "acts": [{"do": "sit"}, {"do": "breathe", "at": 2.0}]}, {"k": "seeker", "x": 700, "acts": [{"do": "raise", "at": 0.6}]}]},
    {"say": "You see, he is not being clever. There is nothing to explain. You cannot explain light to someone who keeps his eyes closed. You can only say... open them.",
     "sky": "dawn", "land": "zen", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "raise", "at": 5.0}]}]},
-   {"say": "All the methods, all the old books of the East, finally say only this one word. Attention. Be here. Be present in whatever you are doing.",
+   {"say": "Osho said the same: all the methods, all the old books of the East, finally say only this one word. Attention. Be present in whatever you are doing.",
     "sky": "dawn", "land": "mountain", "cast": [{"k": "master", "x": 960, "acts": [{"do": "sit", "at": 0.4}, {"do": "breathe", "at": 1.4}]}]}
   ]},
   {"title": "The Watcher by the Road", "ref": "A reflection", "beats": [
@@ -51,7 +51,7 @@
     "sky": "dusk", "land": "hills", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 0.6}, {"do": "breathe", "at": 1.6}]}]},
    {"say": "And slowly, slowly, you will notice something strange. The traffic becomes less. There are gaps. One thought has gone, and the next one has not yet come.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe", "at": 0.6}]}]},
-   {"say": "In that gap... you are. Not your name, not your work, not your worries. Only a pure silence, watching. That gap is the door.",
+   {"say": "Osho called this witnessing. In that gap... you are. Not your name, not your work, not your worries. Only a pure silence, watching. That gap is the door.",
     "sky": "night", "land": "mountain", "cast": [{"k": "gate", "x": 1250, "s": 1.2}, {"k": "seeker", "x": 600, "acts": [{"do": "walk", "to": 1250, "at": 3.0, "dur": 5}]}]}
   ]},
   {"title": "The Musk Deer", "ref": "An Indian fable", "beats": [
@@ -65,7 +65,7 @@
     "sky": "night", "land": "forest", "fx": ["sparkle"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "kneel", "at": 1.0}]}]},
    {"say": "We are all musk deer. Searching for joy in money, in fame, in another person... running from one marketplace to the next.",
     "sky": "day", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 14}, {"k": "man", "x": 400, "acts": [{"do": "walk", "to": 1500, "at": 0.4, "dur": 8}]}]},
-   {"say": "The fragrance you are looking for is not out there. It never was. Stop running, just for one moment... and smell it. It is you.",
+   {"say": "Osho taught that the fragrance you are looking for is not out there. It never was. Stop running, just for one moment... and smell it. It is you.",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.6}, {"do": "breathe", "at": 2.6}]}]}
   ]},
   {"title": "Watching the Fire of Anger", "ref": "A reflection", "beats": [
@@ -79,7 +79,7 @@
     "sky": "night", "land": "field", "cast": [{"k": "fire", "x": 1200, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 800, "acts": [{"do": "sit"}, {"do": "breathe", "at": 0.6}]}]},
    {"say": "And you will be surprised. The moment you watch it, the anger begins to cool. It cannot live in the light of awareness. It needs your sleep to survive.",
     "sky": "night", "land": "field", "fx": ["mist"], "cast": [{"k": "fire", "x": 1200, "s": 1.4, "acts": [{"do": "flicker"}, {"do": "vanish", "at": 5.0}]}, {"k": "seeker", "x": 800, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},
-   {"say": "The anger comes, and the anger goes. And you remain... untouched, like the sky after the storm.",
+   {"say": "This is what Osho meant by watching. The anger comes, and the anger goes. And you remain... untouched, like the sky after the storm.",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "raise", "at": 3.0}]}]}
   ]},
   {"title": "Nasruddin Looks for His Key", "ref": "A Nasruddin story", "beats": [
@@ -93,10 +93,10 @@
     "sky": "night", "land": "city", "cast": [{"k": "lamp", "x": 960, "y": 700, "s": 1.6, "acts": [{"do": "flicker"}]}, {"k": "nasruddin", "x": 900, "acts": [{"do": "raise", "at": 3.4}]}, {"k": "man", "x": 1250, "flip": true, "acts": [{"do": "raise", "at": 0.6}, {"do": "lower", "at": 2.6}]}]},
    {"say": "We all laugh. But this is exactly what every one of us is doing. The key is lost inside... and we search outside, because outside there is light, and people, and noise.",
     "sky": "dusk", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 16}]},
-   {"say": "Inside it is dark. It is unfamiliar. But the key is there, and only there. Take the lamp of awareness... and turn it around.",
+   {"say": "Osho told this joke many times. Inside it is dark, and unfamiliar. But the key is there, and only there. Take the lamp of awareness... and turn it around.",
     "sky": "night", "land": "city", "cast": [{"k": "house", "x": 1300, "s": 1.2}, {"k": "lamp", "x": 600, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 700, "acts": [{"do": "walk", "to": 1150, "at": 2.6, "dur": 5}]}]}
   ]},
-  {"title": "Chop Wood, Carry Water", "ref": "A Zen saying", "beats": [
+  {"title": "Chop Wood, Carry Water", "ref": "A Zen saying · Osho, Hyakujo: The Everest of Zen", "beats": [
    {"say": "The old Zen people had a saying. Before enlightenment, chop wood, carry water. After enlightenment... chop wood, carry water.",
     "sky": "day", "land": "forest", "cast": [{"k": "monk", "x": 800, "acts": [{"do": "raise", "at": 1.6}, {"do": "lower", "at": 2.6}]}]},
    {"say": "Nothing changes on the outside. The same wood, the same well, the same work. But the one who is doing it has changed completely.",
@@ -107,11 +107,11 @@
     "sky": "day", "land": "garden", "cast": [{"k": "cup", "x": 1150, "s": 1.6}, {"k": "teapot", "x": 1320, "s": 1.4}, {"k": "seeker", "x": 850, "acts": [{"do": "sit", "at": 0.6}, {"do": "reach", "at": 6.0}]}]},
    {"say": "This is all that meditation is. Not some strange ritual. Just doing whatever you are doing... with your whole presence.",
     "sky": "dusk", "land": "garden", "fx": ["petals"], "cast": [{"k": "monk", "x": 960, "acts": [{"do": "bow", "at": 2.4}]}]},
-   {"say": "Then every moment becomes a small temple. And the whole day becomes a prayer without words.",
+   {"say": "Osho said: \"Any mundane activity can become meditative.\" Then every moment becomes a small temple. And the whole day becomes a prayer without words.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "bell", "x": 1250, "s": 1.1}, {"k": "monk", "x": 760, "acts": [{"do": "sit", "at": 0.6}]}]}
   ]},
   {"title": "A Meditation: Only Watching", "ref": "A meditation", "beats": [
-   {"say": "Now... let us sit together. Find a comfortable place. Let your back be straight, but not stiff. And close your eyes.",
+   {"say": "Now... let us sit together, the way Osho taught: only watching. Find a comfortable place. Let your back be straight, but not stiff. And close your eyes.",
     "sky": "night", "land": "zen", "cast": [{"k": "candle", "x": 1250, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "cushion", "x": 900, "s": 1.2}, {"k": "seeker", "in": 1, "x": 0, "y": -40, "s": 0.85, "acts": [{"do": "sit", "at": 1.0}]}]},
    {"say": "Take one deep breath... and let it go. Another one... and let it go. Now don't control the breath. Let it come and go by itself.",
     "sky": "night", "land": "zen", "fx": ["mist"], "cast": [{"k": "candle", "x": 1250, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "cushion", "x": 900, "s": 1.2}, {"k": "seeker", "in": 1, "x": 0, "y": -40, "s": 0.85, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},

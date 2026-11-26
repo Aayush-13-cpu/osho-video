@@ -11,10 +11,11 @@ computers instead of yours**. It contains:
 - **10 long videos**: horizontal 10–12 minute talks in glowing line art, each ending in a guided meditation
   (`longform/`). See [The long videos](#the-long-videos).
 
-Every word of narration is original writing in the style of a talk given to a seated audience around 1991; the
-stories are traditional, retold in our own words. The voice is synthetic (Kokoro `bm_george`) with a light
-early-90s room-recording texture. Every long video's description carries the disclaimer: *Independent channel. Not
-affiliated with or endorsed by OSHO International Foundation.*
+The videos explain Osho's teachings in the third person ("Osho taught...", never speaking as him). The narration
+is original commentary, the stories are traditional and retold in our own words, and the only verbatim Osho words
+are short quotes in "quotation marks" taken from Wikiquote, with the book named on the chapter's closing card (the
+tests enforce this). No photos of Osho, no OSHO logo, no cloned voice. The voice is synthetic (Kokoro `bm_george`)
+with a light early-90s room-recording texture. Every long video's description carries the disclaimer below.
 
 **Running the channel (one command):**
 
@@ -465,8 +466,10 @@ with a workflow so a free cloud computer renders it.
 | Kokoro voice | Apache 2.0 |
 | faster-whisper | MIT |
 | Fonts (Cinzel, Cormorant Garamond) | SIL Open Font License |
-| Stories | traditional, retold in original words; quotes only from public-domain translations (Legge 1891, Müller 1881) |
+| Stories | traditional, retold in original words; scripture quotes only from public-domain translations (Legge 1891, Müller 1881) |
+| Osho quotes | one-sentence quotes from Wikiquote's sourced list, each credited to its book; everything else is paraphrase |
 | Music | generated in this repository |
 
-*Independent channel. Not affiliated with or endorsed by OSHO International Foundation. Narration is original
-writing, read by a synthetic voice.*
+*Independent channel about the teachings of Osho. Not affiliated with or endorsed by OSHO International Foundation.
+OSHO is a registered trademark of OSHO International Foundation. Narration is original commentary, read by a
+synthetic voice; short quotations are credited to their books.*

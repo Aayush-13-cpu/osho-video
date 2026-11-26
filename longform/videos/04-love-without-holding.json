@@ -1,15 +1,15 @@
-{"id": "love-without-holding", "template": "bodhi", "title": "Love Without Holding", "thumbnail": "Love Without Holding",
- "description": "Why does love so often turn into a cage? A rich man and the bird he kept in gold, the Sufi lover who knocked at the door and was not let in, the drop that is afraid of the ocean, and the difference between picking a flower and watering it. Then a meditation for the heart.",
+{"id": "love-without-holding", "template": "bodhi", "title": "Osho on Love Without Holding", "thumbnail": "Osho on Love",
+ "description": "What Osho taught about love and freedom, in plain words. Why does love so often turn into a cage? A rich man and the bird he kept in gold, the Sufi lover who knocked at the door and was not let in, the drop that is afraid of the ocean, and the difference between picking a flower and watering it. Then a meditation for the heart.",
  "tags": ["#love", "#freedom", "#sufi", "#osho", "#meditation", "#spirituality", "#rumi"],
  "chapters": [
-  {"title": "Love Without Holding", "ref": "A reflection", "beats": [
+  {"title": "Osho on Love Without Holding", "ref": "Osho, Autobiography of a Spiritually Incorrect Mystic", "beats": [
    {"say": "Everybody wants love. Have you seen any man, any woman, who does not want love? And yet, look around you. How many people are really happy in their love?",
     "sky": "dusk", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 16}]},
    {"say": "Love begins like a song. Two people meet, and the whole world becomes new. And then, slowly, slowly... the song becomes a quarrel, and the quarrel becomes a cage.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "man", "x": 820, "acts": [{"do": "reach", "at": 1.0}]}, {"k": "woman", "x": 1100, "flip": true, "acts": [{"do": "reach", "at": 1.4}, {"do": "lower", "at": 7.0}]}]},
-   {"say": "Tonight I want to talk about a love that does not hold. A love that has open hands.",
+   {"say": "Osho said: \"Love gives you the roots into the earth, and freedom gives you the wings.\" Tonight, let us talk about a love that does not hold. A love that has open hands.",
     "sky": "night", "land": "field", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "raise", "at": 2.0}]}]},
-   {"say": "It is rare. But it is possible. And it begins not with another person... it begins with you.",
+   {"say": "It is rare. But it is possible. And Osho taught that it begins not with another person... it begins with you.",
     "sky": "night", "land": "field", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
   ]},
   {"title": "The Bird in the Golden Cage", "ref": "A Sufi tale", "beats": [
@@ -25,7 +25,7 @@
     "sky": "dawn", "land": "garden", "cast": [{"k": "cage", "x": 1100, "s": 1.4, "acts": [{"do": "open", "at": 4.0}]}, {"k": "man", "x": 800, "acts": [{"do": "reach", "at": 3.0}]}]},
    {"say": "He cried that night. But the next morning, when he woke up, he heard singing at his window. The bird had come back. Free... and singing.",
     "sky": "dawn", "land": "garden", "fx": ["rays"], "cast": [{"k": "house", "x": 1200, "s": 1.2}, {"k": "birds", "x": 1500, "y": 350, "acts": [{"do": "fly", "to": 1250, "toy": 520, "at": 2.0, "dur": 4}]}, {"k": "man", "x": 800, "acts": [{"do": "raise", "at": 6.0}]}]},
-   {"say": "What is held, dies. What is free, returns, if it wants to. And if it does not return... it was never yours.",
+   {"say": "For Osho, love and freedom go together. What is held, dies. What is free, returns, if it wants to. And if it does not return... it was never yours.",
     "sky": "day", "land": "hills", "cast": [{"k": "birds", "x": 300, "y": 400, "acts": [{"do": "fly", "to": 1700, "toy": 300, "at": 0.4, "dur": 8}]}]}
   ]},
   {"title": "Love and Need", "ref": "A reflection", "beats": [
@@ -39,7 +39,7 @@
     "sky": "storm", "land": "field", "fx": ["rain"], "cast": [{"k": "cloud", "x": 960, "y": 320, "s": 1.6}, {"k": "plant", "x": 960, "s": 1.6, "acts": [{"do": "grow", "at": 2.0}]}]},
    {"say": "Such a person does not cling. He does not say: you must be mine. He says: be yourself, and let me share my joy with you, as long as we both like it.",
     "sky": "day", "land": "garden", "cast": [{"k": "man", "x": 800, "acts": [{"do": "bless", "at": 3.0}]}, {"k": "woman", "x": 1120, "flip": true}]},
-   {"say": "First learn to be alone, happily alone. Only one who can be alone is capable of love.",
+   {"say": "Osho taught: first learn to be alone, happily alone. Only one who can be alone is capable of love.",
     "sky": "dusk", "land": "mountain", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 0.6}, {"do": "breathe", "at": 1.6}]}]}
   ]},
   {"title": "Who Is at the Door?", "ref": "A Sufi tale (Rumi)", "beats": [
@@ -53,7 +53,7 @@
     "sky": "night", "land": "city", "fx": ["sparkle"], "cast": [{"k": "house", "x": 1250, "s": 1.2}, {"k": "man", "x": 1020, "acts": [{"do": "reach", "at": 2.0}]}]},
    {"say": "And the door opened.",
     "sky": "dawn", "land": "city", "fx": ["rays"], "cast": [{"k": "house", "x": 1250, "s": 1.2}, {"k": "man", "x": 1020, "acts": [{"do": "walk", "to": 1250, "at": 0.4, "dur": 2}]}]},
-   {"say": "As long as there is an I, love is a bargain. When the I disappears, love becomes a prayer. The door was never locked. Only you were standing in the way.",
+   {"say": "Osho taught: as long as there is an I, love is a bargain. When the I disappears, love becomes a prayer. The door was never locked. Only you were standing in the way.",
     "sky": "dawn", "land": "hills", "cast": [{"k": "gate", "x": 960, "s": 1.2}]}
   ]},
   {"title": "The Shadow Called Jealousy", "ref": "A reflection", "beats": [
@@ -65,10 +65,10 @@
     "sky": "day", "land": "river", "cast": [{"k": "seeker", "x": 960, "y": 820, "acts": [{"do": "raise", "at": 2.0}]}]},
    {"say": "When jealousy comes, don't fight it, don't act on it. Watch it. See the fear underneath it. And the fear will tell you: I am not yet full enough to love.",
     "sky": "night", "land": "field", "cast": [{"k": "fire", "x": 1250, "s": 1.2, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 800, "acts": [{"do": "sit", "at": 0.6}]}]},
-   {"say": "That is not bad news. That is the beginning of real love.",
+   {"say": "Osho taught: watch the jealousy, don't fight it. That is not bad news. That is the beginning of real love.",
     "sky": "dawn", "land": "field", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "stand", "at": 1.0}]}]}
   ]},
-  {"title": "The Drop and the Ocean", "ref": "A Sufi image", "beats": [
+  {"title": "The Drop and the Ocean", "ref": "A Sufi image · Osho, Come, Come, Yet Again Come", "beats": [
    {"say": "A drop of water is falling from a cloud towards the ocean. And the drop is afraid. If I fall into the ocean, I will be lost. I will die.",
     "sky": "storm", "land": "sea", "fx": ["rain"], "cast": [{"k": "cloud", "x": 960, "y": 300, "s": 1.4}]},
    {"say": "The drop is right, in a way. It will be lost as a small drop. Its little shape, its little boundary... gone.",
@@ -77,7 +77,7 @@
     "sky": "day", "land": "sea", "fx": ["sparkle"], "cast": [{"k": "boat", "x": 1300, "y": 880, "s": 0.8, "acts": [{"do": "rock", "amp": 2, "period": 4}]}]},
    {"say": "This is love. To be lost in something bigger than yourself. That is why love frightens us... and that is why nothing else can satisfy us.",
     "sky": "dusk", "land": "sea", "cast": [{"k": "seeker", "x": 700, "y": 820, "acts": [{"do": "raise", "at": 4.0}]}]},
-   {"say": "Every love story is a small rehearsal for that great falling.",
+   {"say": "Osho said: \"My whole teaching consists of two words, meditation and love.\" Every love story is a small rehearsal for that great falling.",
     "sky": "dusk", "land": "sea", "fx": ["ripples"], "cast": [{"k": "seeker", "x": 700, "y": 820, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
   {"title": "Picking the Flower, Watering the Flower", "ref": "A reflection", "beats": [
@@ -89,10 +89,10 @@
     "sky": "dawn", "land": "garden", "cast": [{"k": "plant", "x": 1100, "s": 1.6}, {"k": "jar", "x": 900, "s": 1.0}, {"k": "farmer", "x": 750, "acts": [{"do": "kneel", "at": 3.0}]}]},
    {"say": "The first man's love is possession. The second man's love is care. One takes. The other gives... and the rose goes on blooming.",
     "sky": "day", "land": "garden", "fx": ["petals"], "cast": [{"k": "plant", "x": 1100, "s": 1.8, "acts": [{"do": "grow", "at": 0.4}]}, {"k": "farmer", "x": 750}]},
-   {"say": "Look at your own love. Are you picking the flower? Or are you watering it?",
+   {"say": "Osho taught: love that possesses is not love. Look at your own love. Are you picking the flower? Or are you watering it?",
     "sky": "dusk", "land": "garden", "cast": [{"k": "plant", "x": 960, "s": 1.6}]}
   ]},
-  {"title": "Love Is a Fragrance", "ref": "A reflection", "beats": [
+  {"title": "Love Is a Fragrance", "ref": "Osho, Sat Chit Anand", "beats": [
    {"say": "We think love is a relationship. Something between two people, like a bridge. And so we are always worried about the bridge. Is it strong enough? Will it break?",
     "sky": "day", "land": "river", "cast": [{"k": "bridge", "x": 960, "y": 860, "s": 1.6}, {"k": "man", "x": 700, "acts": [{"do": "walk", "to": 860, "at": 0.4, "dur": 4}]}]},
    {"say": "But real love is not a relationship. It is a state of being. It is not something you do. It is something you are.",
@@ -105,11 +105,11 @@
     "sky": "dusk", "land": "hills", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
    {"say": "You can leave, and the love remains. You can come back, and the love is there to welcome you. Like the sky. It never closes the door.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "gate", "x": 960, "s": 1.2}, {"k": "woman", "x": 600, "acts": [{"do": "walk", "to": 960, "at": 2.0, "dur": 5}]}]},
-   {"say": "So don't ask: who will love me? Ask: how can I become loving? That question will take you very far.",
+   {"say": "Osho said: \"Nobody can teach you love. Love you have to find yourself, within your being.\" So don't ask: who will love me? Ask: how can I become loving?",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe", "at": 1.0}]}]}
   ]},
   {"title": "A Meditation for the Heart", "ref": "A meditation", "beats": [
-   {"say": "Now sit comfortably, and close your eyes. Put both your hands on your heart, one over the other. Feel the warmth of your own hands.",
+   {"say": "Now sit comfortably, and close your eyes. This is a heart meditation in the spirit of Osho's teaching. Put both your hands on your heart. Feel the warmth of your own hands.",
     "sky": "night", "land": "field", "cast": [{"k": "candle", "x": 1300, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 900, "acts": [{"do": "sit", "at": 0.6}, {"do": "reach", "at": 3.0}]}]},
    {"say": "Feel the heart beating underneath. It has been beating for you all your life, day and night, without asking anything.",
     "sky": "night", "land": "field", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 900, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},

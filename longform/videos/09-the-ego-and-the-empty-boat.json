@@ -1,18 +1,18 @@
-{"id": "the-ego-and-the-empty-boat", "template": "zendo", "title": "The Ego and the Empty Boat", "thumbnail": "The Ego and the Empty Boat",
- "description": "Who is it that gets insulted, that needs to win, that is never satisfied? Chuang Tzu's empty boat, the Buddha refusing a gift of insults, an eagle who thought he was a chicken, an elephant tied with a thin rope, a frog who knew everything about his well, a man who carried his raft on his head, and a beggar's bowl that no king could fill. Then a meditation on being nobody.",
+{"id": "the-ego-and-the-empty-boat", "template": "zendo", "title": "Osho on the Ego and the Empty Boat", "thumbnail": "Osho: The Empty Boat",
+ "description": "What Osho taught about the ego, in plain words. Who is it that gets insulted, that needs to win, that is never satisfied? Chuang Tzu's empty boat, the Buddha refusing a gift of insults, an eagle who thought he was a chicken, an elephant tied with a thin rope, a frog who knew everything about his well, a man who carried his raft on his head, and a beggar's bowl that no king could fill. Then a meditation on being nobody.",
  "tags": ["#ego", "#chuangtzu", "#buddha", "#osho", "#zen", "#meditation", "#spirituality"],
  "chapters": [
-  {"title": "The Ego and the Empty Boat", "ref": "A reflection", "beats": [
+  {"title": "Osho on the Ego and the Empty Boat", "ref": "Osho, Tantra: The Supreme Understanding", "beats": [
    {"say": "There is a little voice in you that says I. I want. I am right. I have been insulted. I must win. You have heard it so many times, you think it is you.",
     "sky": "dusk", "land": "city", "cast": [{"k": "man", "x": 960, "acts": [{"do": "raise", "at": 4.0}]}]},
-   {"say": "The old masters called it the ego. Not a thing, really. More like a knot. A knot in the rope of life, that makes the rope think it is separate.",
+   {"say": "Osho called it the ego. Not a thing, really. More like a knot. A knot in the rope of life, that makes the rope think it is separate.",
     "sky": "night", "land": "zen", "cast": [{"k": "rope", "x": 960, "s": 1.6}]},
    {"say": "And all our misery comes from that knot. Every quarrel, every war, every sleepless night.",
     "sky": "storm", "land": "city", "fx": ["lightning"], "cast": [{"k": "crowd", "x": 960, "n": 16}]},
-   {"say": "Tonight, a few stories about the knot. And perhaps, while you are laughing, it will loosen a little.",
+   {"say": "Osho said: \"When you are no more, only then for the first time will you be.\" Tonight, a few stories about that knot.",
     "sky": "dawn", "land": "zen", "fx": ["rays"], "cast": [{"k": "rope", "x": 960, "s": 1.6, "acts": [{"do": "drift", "amp": 20, "period": 6}]}]}
   ]},
-  {"title": "The Empty Boat", "ref": "Chuang Tzu", "beats": [
+  {"title": "The Empty Boat", "ref": "Chuang Tzu · Osho, The Empty Boat", "beats": [
    {"say": "Chuang Tzu says: a man is crossing a river in his boat, in the early morning mist. Suddenly another boat comes out of the fog and crashes into his.",
     "sky": "dawn", "land": "river", "fx": ["mist"], "cast": [{"k": "boat", "x": 600, "y": 860, "s": 0.9, "acts": [{"do": "drift", "amp": 30, "period": 6}]}, {"k": "man", "in": 0, "x": -40, "y": -40, "s": 0.7}]},
    {"say": "He is furious. He stands up and shouts: you fool, watch where you are going! He is ready to fight.",
@@ -25,7 +25,7 @@
     "sky": "day", "land": "river", "fx": ["ripples"], "cast": [{"k": "boat", "x": 960, "y": 860, "s": 0.9, "acts": [{"do": "rock", "amp": 2, "period": 4}]}]},
    {"say": "Because there is nobody there to be harmed. The insults will pass through you like wind through an empty house.",
     "sky": "dusk", "land": "hills", "cast": [{"k": "house", "x": 960, "s": 1.2}]},
-   {"say": "This is not weakness. It is the greatest strength. The empty boat cannot be sunk.",
+   {"say": "Osho gave a whole series of talks on this story, The Empty Boat. This is not weakness. It is the greatest strength. The empty boat cannot be sunk.",
     "sky": "dusk", "land": "river", "cast": [{"k": "boat", "x": 960, "y": 860, "s": 0.9}]}
   ]},
   {"title": "The Gift Not Accepted", "ref": "A Buddhist story", "beats": [
@@ -41,7 +41,7 @@
     "sky": "dusk", "land": "garden", "cast": [{"k": "master", "x": 1150, "flip": true, "acts": [{"do": "sit"}]}, {"k": "man", "x": 750, "acts": [{"do": "bow", "at": 5.0}]}]},
    {"say": "When someone insults you, they are handing you a parcel. You don't have to open it. You don't have to carry it home.",
     "sky": "night", "land": "city", "cast": [{"k": "chest", "x": 960, "s": 1.2}]},
-   {"say": "The ego grabs every parcel. Awareness simply watches it being offered... and lets it stay where it came from.",
+   {"say": "Osho taught: the ego grabs every parcel. Awareness simply watches it being offered... and lets it stay where it came from.",
     "sky": "night", "land": "zen", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
   {"title": "The Eagle Among the Chickens", "ref": "An Indian fable", "beats": [
@@ -57,7 +57,7 @@
     "sky": "dusk", "land": "field", "cast": [{"k": "birds", "x": 900, "y": 820, "s": 1.2, "acts": [{"do": "vanish", "at": 3.0}]}]},
    {"say": "The ego is a borrowed idea of who you are. Borrowed from your parents, your school, your neighbours. Small, frightened, scratching in the dirt.",
     "sky": "night", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 14}]},
-   {"say": "But you are not what they told you. You have wings. Look up, my friend. The sky has been waiting for you.",
+   {"say": "Osho taught: drop the conditioning. You are not what they told you. You have wings. Look up. The sky has been waiting for you.",
     "sky": "dawn", "land": "mountain", "fx": ["rays"], "cast": [{"k": "birds", "x": 900, "y": 600, "s": 1.4, "acts": [{"do": "fly", "to": 1500, "toy": 250, "at": 1.0, "dur": 6}]}]}
   ]},
   {"title": "The Elephant and the Thin Rope", "ref": "An Indian fable", "beats": [
@@ -71,7 +71,7 @@
     "sky": "night", "land": "zen", "cast": [{"k": "rope", "x": 960, "s": 1.4}, {"k": "seeker", "x": 700, "acts": [{"do": "kneel", "at": 4.0}]}]},
    {"say": "The ego is made of such ropes. Ideas about yourself, tied when you were too small to say no.",
     "sky": "night", "land": "zen", "cast": [{"k": "rope", "x": 960, "s": 1.4}]},
-   {"say": "Just take one step. You will be surprised how easily they break.",
+   {"say": "Osho called these ropes conditioning. Just take one step. You will be surprised how easily they break.",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "seeker", "x": 800, "acts": [{"do": "stand", "at": 0.6}, {"do": "walk", "to": 1200, "at": 1.4, "dur": 3}]}]}
   ]},
   {"title": "The Frog in the Well", "ref": "A Chinese fable", "beats": [
@@ -85,7 +85,7 @@
     "sky": "dusk", "land": "field", "cast": [{"k": "well", "x": 960, "s": 1.2}]},
    {"say": "The ego is a well. Small, and comfortable, and very sure of itself. My religion, my country, my opinions. Anything bigger feels like a lie.",
     "sky": "night", "land": "field", "cast": [{"k": "well", "x": 960, "s": 1.2}]},
-   {"say": "Meditation is climbing out of the well. It is frightening at first. Then you see the sky.",
+   {"say": "Osho taught: meditation is climbing out of the well. It is frightening at first. Then you see the sky.",
     "sky": "dawn", "land": "sea", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "y": 820, "acts": [{"do": "raise", "at": 2.0}]}]}
   ]},
   {"title": "The Man Who Carried His Raft", "ref": "A Buddhist parable", "beats": [
@@ -97,7 +97,7 @@
     "sky": "dusk", "land": "garden", "cast": [{"k": "master", "x": 960, "acts": [{"do": "sit"}, {"do": "bless", "at": 3.0}]}]},
    {"say": "Even spiritual things can feed the ego. I am a meditator. I am religious. I know the words of the masters by heart. Another raft on the head.",
     "sky": "dusk", "land": "city", "cast": [{"k": "man", "x": 960, "acts": [{"do": "raise", "at": 3.0}]}, {"k": "scroll", "in": 0, "x": 0, "y": -220, "s": 0.8}]},
-   {"say": "Use everything. Hold nothing. Not even this.",
+   {"say": "Osho taught: use a method, then drop it. Use everything. Hold nothing. Not even this.",
     "sky": "night", "land": "river", "fx": ["ripples"], "cast": [{"k": "mat", "x": 960, "y": 870, "s": 1.6}]}
   ]},
   {"title": "The Begging Bowl", "ref": "A Sufi tale", "beats": [
@@ -109,11 +109,11 @@
     "sky": "dusk", "land": "city", "cast": [{"k": "cup", "x": 960, "s": 1.6}, {"k": "man", "x": 1200, "flip": true, "acts": [{"do": "kneel", "at": 0.6}]}, {"k": "elder", "x": 700, "acts": [{"do": "reach", "at": 6.0}]}]},
    {"say": "Whatever you put into it, it is never enough. More money, more fame, more praise. The ego is a bowl without a bottom.",
     "sky": "night", "land": "city", "cast": [{"k": "cup", "x": 960, "s": 1.8}]},
-   {"say": "You cannot fill it. You can only see through it. And the moment you see it, you stop pouring.",
+   {"say": "Osho taught: desire can never be filled, only seen through. And the moment you see it, you stop pouring.",
     "sky": "dawn", "land": "zen", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]}
   ]},
   {"title": "A Meditation: Nobody Here", "ref": "A meditation", "beats": [
-   {"say": "Now sit, and close your eyes. Let the body be still. Let the breath be easy.",
+   {"say": "Now sit, and close your eyes. Osho taught that the ego dissolves in watching. Let the body be still. Let the breath be easy.",
     "sky": "night", "land": "zen", "cast": [{"k": "candle", "x": 1300, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 850, "acts": [{"do": "sit", "at": 0.6}]}]},
    {"say": "Look for the one you call I. Where is it? In the head? In the chest? Look carefully, as you would look for a lost coin.",
     "sky": "night", "land": "zen", "cast": [{"k": "candle", "x": 1300, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 850, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},

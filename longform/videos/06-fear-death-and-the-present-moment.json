@@ -1,15 +1,15 @@
-{"id": "fear-death-and-the-present-moment", "template": "ganga", "title": "Fear, Death and the Present Moment", "thumbnail": "Fear, Death and This Moment",
- "description": "Every fear is, underneath, the fear of death. A mother who searched the whole town for a mustard seed, a tea master facing a samurai's sword, the burning ghats by the river, a servant who ran from Death to the next city, and a man hanging from a vine who found a strawberry. Then a meditation on the breath that is happening now.",
+{"id": "fear-death-and-the-present-moment", "template": "ganga", "title": "Osho on Fear, Death and the Present Moment", "thumbnail": "Osho on Fear and Death",
+ "description": "What Osho taught about fear and death, in plain words. Every fear is, underneath, the fear of death. A mother who searched the whole town for a mustard seed, a tea master facing a samurai's sword, the burning ghats by the river, a servant who ran from Death to the next city, and a man hanging from a vine who found a strawberry. Then a meditation on the breath that is happening now.",
  "tags": ["#fear", "#death", "#presentmoment", "#osho", "#buddha", "#zen", "#meditation"],
  "chapters": [
-  {"title": "Fear, Death and the Present Moment", "ref": "A reflection", "beats": [
+  {"title": "Osho on Fear, Death and the Present Moment", "ref": "Osho, The Art of Dying", "beats": [
    {"say": "Look closely at any fear. Fear of losing your job, fear of being alone, fear of what people will say. Go deep enough into it... and underneath, you will find one fear.",
     "sky": "dusk", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 14}, {"k": "man", "x": 700, "acts": [{"do": "kneel", "at": 6.0}]}]},
-   {"say": "The fear of death. Of not being. All the small fears are its children.",
+   {"say": "The fear of death. Of not being. All the small fears are its children. Osho spoke about death again and again.",
     "sky": "night", "land": "hills", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
    {"say": "We don't talk about it. We hide the dead quickly, we change the subject, we say: not now, not me, not yet. But it is the one thing that is certain.",
     "sky": "night", "land": "hills", "fx": ["mist"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},
-   {"say": "Tonight, let us not run. Let us sit with the old stories, and look at death straight in the face. You may be surprised what you find.",
+   {"say": "His advice was: \"Let there be a let-go.\" So tonight, let us not run. Let us sit with the old stories, and look at death straight in the face.",
     "sky": "dawn", "land": "river", "fx": ["rays"], "cast": [{"k": "boat", "x": 1200, "y": 860, "s": 0.9, "acts": [{"do": "rock", "amp": 2, "period": 4}]}]}
   ]},
   {"title": "The Mustard Seed", "ref": "A Buddhist story", "beats": [
@@ -27,7 +27,7 @@
     "sky": "dusk", "land": "city", "cast": [{"k": "woman", "x": 400, "acts": [{"do": "walk", "to": 1500, "at": 0.4, "dur": 10}]}]},
    {"say": "By evening she sat down outside the town. And slowly she understood. Death is not my enemy alone. It comes to every house. It is the way of things.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "woman", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
-   {"say": "She buried her son with her own hands. Then she went back to the Buddha. And she never left him again.",
+   {"say": "She buried her son with her own hands. Then she went back to the Buddha, and never left him again. Osho taught that this seeing is the end of fear.",
     "sky": "dawn", "land": "garden", "fx": ["rays"], "cast": [{"k": "bodhi", "x": 1250, "s": 0.8}, {"k": "master", "x": 1150, "flip": true, "acts": [{"do": "sit"}]}, {"k": "woman", "x": 750, "acts": [{"do": "bow", "at": 3.0}]}]}
   ]},
   {"title": "Afraid of the Dark", "ref": "A reflection", "beats": [
@@ -41,7 +41,7 @@
     "sky": "dusk", "land": "field", "cast": [{"k": "elder", "x": 960, "acts": [{"do": "kneel", "at": 2.0}]}]},
    {"say": "And a man who has lived each moment fully is not so worried. He has eaten the meal. He can get up from the table with a smile.",
     "sky": "day", "land": "garden", "cast": [{"k": "table", "x": 960, "s": 1.3}, {"k": "elder", "x": 700, "acts": [{"do": "stand", "at": 2.0}, {"do": "bless", "at": 4.0}]}]},
-   {"say": "So the medicine for the fear of death is not a belief. It is life. Live so totally that nothing is left over.",
+   {"say": "Osho taught: the medicine for the fear of death is not a belief. It is life. Live so totally that nothing is left over.",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "raise", "at": 3.0}]}]}
   ]},
   {"title": "The Tea Master and the Samurai", "ref": "A Japanese story", "beats": [
@@ -57,7 +57,7 @@
     "sky": "dawn", "land": "field", "fx": ["mist"], "cast": [{"k": "monk", "x": 760, "acts": [{"do": "raise", "at": 3.0}]}, {"k": "samurai", "x": 1200, "flip": true, "acts": [{"do": "raise", "at": 1.0}]}]},
    {"say": "The samurai looked at him for a long time. He could find no gap, no weakness, no fear to cut into. Finally he lowered his sword, bowed, and walked away.",
     "sky": "dawn", "land": "field", "fx": ["rays"], "cast": [{"k": "monk", "x": 760, "acts": [{"do": "raise"}]}, {"k": "samurai", "x": 1200, "flip": true, "acts": [{"do": "lower", "at": 4.0}, {"do": "bow", "at": 6.0}]}]},
-   {"say": "Fear lives in the future. In what might happen. The man who is totally in the present has nowhere for the fear to stand.",
+   {"say": "Osho taught that fear lives in the future. In what might happen. The man who is totally in the present has nowhere for the fear to stand.",
     "sky": "day", "land": "zen", "cast": [{"k": "monk", "x": 960, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
   ]},
   {"title": "At the Burning Ghat", "ref": "A reflection", "beats": [
@@ -69,7 +69,7 @@
     "sky": "night", "land": "river", "fx": ["fireflies"], "cast": [{"k": "fire", "x": 1350, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 800, "acts": [{"do": "sit", "at": 0.6}]}]},
    {"say": "The fire takes the body. The body was borrowed from the earth, and now it is given back. But who was living in it?",
     "sky": "night", "land": "river", "cast": [{"k": "fire", "x": 1350, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 800, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},
-   {"say": "That is the question the river has been asking for thousands of years. And the only way to answer it is to find, while you are alive, the one who does not burn.",
+   {"say": "That is the question the river has been asking for thousands of years. Osho's answer: find, while you are alive, the one who does not burn.",
     "sky": "dawn", "land": "river", "fx": ["rays", "ripples"], "cast": [{"k": "boat", "x": 1100, "y": 860, "s": 0.9, "acts": [{"do": "rock", "amp": 2, "period": 4}]}]}
   ]},
   {"title": "The Servant Who Ran from Death", "ref": "A Sufi tale", "beats": [
@@ -85,7 +85,7 @@
     "sky": "night", "land": "desert", "cast": [{"k": "man", "x": 400, "acts": [{"do": "walk", "to": 1600, "at": 0.4, "dur": 4}]}]},
    {"say": "We all run. To Samarra, to the next job, the next city, the next pleasure. But the running only takes us faster to the place we are running from.",
     "sky": "night", "land": "desert", "fx": ["mist"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
-   {"say": "Stop running. Turn around. Look at what you are afraid of. Most of the time, there is nothing there but your own shadow.",
+   {"say": "Osho taught: stop running. Turn around. Look at what you are afraid of. Most of the time, there is nothing there but your own shadow.",
     "sky": "dawn", "land": "desert", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "stand", "at": 1.0}]}]}
   ]},
   {"title": "The Strawberry", "ref": "A Zen parable", "beats": [
@@ -99,11 +99,11 @@
     "sky": "dusk", "land": "mountain", "cast": [{"k": "plant", "x": 1450, "y": 720, "s": 0.8}, {"k": "man", "x": 1300, "y": 700, "acts": [{"do": "reach", "at": 5.0}]}]},
    {"say": "How sweet it tasted!",
     "sky": "dawn", "land": "mountain", "fx": ["sparkle"], "cast": [{"k": "man", "x": 1300, "y": 700, "acts": [{"do": "raise", "at": 0.4}]}]},
-   {"say": "The tiger above is the past. The tiger below is the future. The mice are day and night, eating away your time. And the strawberry is this moment. Eat it... it is sweet.",
+   {"say": "The tiger above is the past. The tiger below is the future. The mice are day and night. And the strawberry, Osho taught, is this moment. Eat it... it is sweet.",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
   ]},
   {"title": "A Meditation: This Breath", "ref": "A meditation", "beats": [
-   {"say": "Now let us sit. Close your eyes. Feel the breath coming in through the nose. Cool. And going out. Warm.",
+   {"say": "Now let us sit, and watch the breath, the way Osho taught Vipassana. Close your eyes. Feel the breath coming in through the nose. Cool. And going out. Warm.",
     "sky": "night", "land": "river", "cast": [{"k": "candle", "x": 1300, "s": 1.4, "acts": [{"do": "flicker"}]}, {"k": "seeker", "x": 850, "y": 820, "acts": [{"do": "sit", "at": 1.0}]}]},
    {"say": "This breath is not in the past. It is not in the future. It is only happening now. Every breath is a doorway into the present.",
     "sky": "night", "land": "river", "fx": ["ripples"], "cast": [{"k": "seeker", "x": 850, "y": 820, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},

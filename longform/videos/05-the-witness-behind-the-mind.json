@@ -1,15 +1,15 @@
-{"id": "the-witness-behind-the-mind", "template": "himalaya", "title": "The Witness Behind the Mind", "thumbnail": "The Witness Behind the Mind",
- "description": "You are not your thoughts. Then who is it that sees them? A rope mistaken for a snake, a mirror that never gathers dust, two birds sitting on one tree, an actor who forgets he is acting, and Chuang Tzu waking from his butterfly dream. Then a meditation to rest as the one who watches.",
+{"id": "the-witness-behind-the-mind", "template": "himalaya", "title": "Osho on the Witness Behind the Mind", "thumbnail": "Osho: The Witness",
+ "description": "What Osho taught about the witness, in plain words. You are not your thoughts. Then who is it that sees them? A rope mistaken for a snake, a mirror that never gathers dust, two birds sitting on one tree, an actor who forgets he is acting, and Chuang Tzu waking from his butterfly dream. Then a meditation to rest as the one who watches.",
  "tags": ["#witness", "#awareness", "#meditation", "#osho", "#upanishads", "#chuangtzu", "#spirituality"],
  "chapters": [
-  {"title": "The Witness Behind the Mind", "ref": "A reflection", "beats": [
+  {"title": "Osho on the Witness Behind the Mind", "ref": "Osho, My Way: The Way of the White Clouds", "beats": [
    {"say": "You say: I am angry. I am sad. I am worried. But have you ever stopped and asked... who is it that knows the anger? Who is watching the sadness?",
     "sky": "night", "land": "mountain", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
    {"say": "The anger comes and goes. The sadness comes and goes. But the one who sees them... has never come and never gone.",
     "sky": "night", "land": "mountain", "fx": ["mist"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},
-   {"say": "The old seers of India called it the witness. The one who watches. Not the thoughts, not the feelings, but the light in which they appear.",
+   {"say": "The old seers of India called it the witness. Osho made it the heart of his teaching. Not the thoughts, not the feelings, but the light in which they appear.",
     "sky": "dawn", "land": "mountain", "fx": ["rays"], "cast": [{"k": "master", "x": 960, "acts": [{"do": "sit", "at": 0.4}]}]},
-   {"say": "Tonight we will look for this witness. Not in books. In you.",
+   {"say": "He gave a simple hint: \"Find moments when you are not, and those will be the moments when you will be for the first time...really.\" Tonight we look for this witness. Not in books. In you.",
     "sky": "dawn", "land": "mountain", "cast": [{"k": "master", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]}
   ]},
   {"title": "The Rope and the Snake", "ref": "An Upanishadic image", "beats": [
@@ -23,7 +23,7 @@
     "sky": "night", "land": "field", "fx": ["sparkle"], "cast": [{"k": "rope", "x": 1150, "s": 1.4}]},
    {"say": "This is the whole of our misery. We take the mind for ourselves. We take the fears for reality. We are running from snakes that are only ropes.",
     "sky": "dusk", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 14}]},
-   {"say": "You don't have to kill the snake. You have to bring the lamp. And the lamp is awareness.",
+   {"say": "Osho taught: don't fight the darkness, bring light. You don't have to kill the snake. You have to bring the lamp. And the lamp is awareness.",
     "sky": "dawn", "land": "field", "fx": ["rays"], "cast": [{"k": "lamp", "x": 960, "s": 1.6, "acts": [{"do": "flicker"}]}]}
   ]},
   {"title": "The Mirror and the Dust", "ref": "A Zen story", "beats": [
@@ -37,7 +37,7 @@
     "sky": "night", "land": "zen", "fx": ["sparkle"], "cast": [{"k": "scroll", "x": 960, "s": 1.3, "acts": [{"do": "appear", "at": 0.4}]}]},
    {"say": "That kitchen boy became the next master. Because he saw that you don't have to clean the mirror all your life. You are not the mirror. You are the emptiness in which the mirror appears.",
     "sky": "dawn", "land": "zen", "fx": ["rays"], "cast": [{"k": "child", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
-   {"say": "Cleaning is good. But seeing is better. In one moment of seeing, all the dust is gone.",
+   {"say": "Osho taught: cleaning is good. But seeing is better. In one moment of seeing, all the dust is gone.",
     "sky": "dawn", "land": "zen", "cast": [{"k": "child", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]}
   ]},
   {"title": "Two Birds on One Tree", "ref": "An Upanishadic image", "beats": [
@@ -51,7 +51,7 @@
     "sky": "dusk", "land": "hills", "cast": [{"k": "tree", "x": 960, "s": 1.4}, {"k": "seeker", "x": 600, "acts": [{"do": "sit", "at": 1.0}]}]},
    {"say": "And the moment the first bird looks up, and sees the second... it becomes still too. It discovers that it was always the same bird.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "tree", "x": 960, "s": 1.4}, {"k": "birds", "x": 960, "y": 360, "s": 0.8}]},
-   {"say": "So go on eating the fruits, if you like. But now and then, look up.",
+   {"say": "Osho taught: be the bird who watches. So go on eating the fruits, if you like. But now and then, look up.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 600, "acts": [{"do": "sit"}, {"do": "raise", "at": 2.0}]}]}
   ]},
   {"title": "The Actor Who Forgot", "ref": "A reflection", "beats": [
@@ -65,7 +65,7 @@
     "sky": "dusk", "land": "city", "cast": [{"k": "crowd", "x": 960, "n": 16}]},
    {"say": "Play the part. Play it well. There is nothing wrong in it. But remember, just under the costume... there is someone who is only watching the play.",
     "sky": "night", "land": "city", "fx": ["sparkle"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "bow", "at": 2.0}]}]},
-   {"say": "When you remember that, you can enjoy the drama. Even the sad scenes. Because you know the curtain will come down... and you will still be there.",
+   {"say": "Osho taught: life is a drama, and you are the witness. Then you can enjoy even the sad scenes. Because you know the curtain will come down... and you will still be there.",
     "sky": "night", "land": "hills", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}, {"do": "breathe", "at": 2.0}]}]}
   ]},
   {"title": "The Butterfly Dream", "ref": "Chuang Tzu", "beats": [
@@ -79,7 +79,7 @@
     "sky": "night", "land": "hills", "fx": ["sparkle"], "cast": [{"k": "butterfly", "x": 960, "y": 450, "s": 1.2, "acts": [{"do": "fly", "to": 1300, "toy": 380, "at": 0.4, "dur": 8}]}]},
    {"say": "So how do you know that this life, this morning, this body, these worries... are not another dream?",
     "sky": "night", "land": "garden", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
-   {"say": "The witness is the one who wakes up. Dream or no dream, it is the one who sees.",
+   {"say": "Osho taught: the witness is the one who wakes up. Dream or no dream, it is the one who sees.",
     "sky": "dawn", "land": "garden", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]}
   ]},
   {"title": "The Sky and the Clouds", "ref": "A reflection", "beats": [
@@ -93,7 +93,7 @@
     "sky": "dusk", "land": "hills", "cast": [{"k": "cloud", "x": 400, "y": 300, "acts": [{"do": "fly", "to": 1800, "at": 0.4, "dur": 10}]}, {"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
    {"say": "So the next time a dark mood comes, don't say: I am depressed. Say: a cloud of depression is passing. And watch it pass.",
     "sky": "night", "land": "hills", "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},
-   {"say": "It is a very small change in words. And it changes everything.",
+   {"say": "Osho taught exactly this. It is a very small change in words. And it changes everything.",
     "sky": "dawn", "land": "hills", "fx": ["rays"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]}
   ]},
   {"title": "Who Is Watching?", "ref": "A reflection", "beats": [
@@ -107,11 +107,11 @@
     "sky": "night", "land": "field", "fx": ["sparkle"], "cast": [{"k": "well", "x": 960, "s": 1.2}]},
    {"say": "Don't try to understand this with the head. It cannot be understood. It can only be tasted, the way you taste sugar.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit", "at": 1.0}]}]},
-   {"say": "Nobody can describe the taste of sugar to you. Put a little on your tongue, and you know. So let us put a little on the tongue.",
+   {"say": "Osho taught: experience, don't believe. Nobody can describe the taste of sugar to you. Put a little on your tongue, and you know. So let us put a little on the tongue.",
     "sky": "night", "land": "hills", "fx": ["fireflies"], "cast": [{"k": "seeker", "x": 960, "acts": [{"do": "sit"}, {"do": "breathe"}]}]}
   ]},
   {"title": "A Meditation: The One Who Watches", "ref": "A meditation", "beats": [
-   {"say": "Now let us sit. Close your eyes. Let the body settle, like a glass of muddy water left on the table. Slowly the mud goes down.",
+   {"say": "Now let us sit, and simply witness, as Osho taught. Close your eyes. Let the body settle, like a glass of muddy water left on the table. Slowly the mud goes down.",
     "sky": "night", "land": "mountain", "cast": [{"k": "jar", "x": 1250, "s": 1.2}, {"k": "seeker", "x": 850, "acts": [{"do": "sit", "at": 1.0}]}]},
    {"say": "Notice the sounds around you. Don't name them. Just notice. Sound comes... and goes. And you are the one who hears.",
     "sky": "night", "land": "mountain", "fx": ["mist"], "cast": [{"k": "seeker", "x": 850, "acts": [{"do": "sit"}, {"do": "breathe"}]}]},
