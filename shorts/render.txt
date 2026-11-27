@@ -1,5 +1,8 @@
 # Story ids to render (from shorts/stories_library.json, stories.json and stories_inkwash.json), one per line.
 # Pushing a change here starts a render; each run becomes one release you can download anywhere.
-# queued 2026-11-26 03:50:37 UTC
-the-frog-in-the-well
-the-thin-rope
+# queued 2026-11-27 13:32:20 UTC
+the-eagle-who-lived-as-a-chicken
+the-stonecutter
+the-bird-in-the-golden-cage
+the-drop-and-the-ocean
+the-burning-house
