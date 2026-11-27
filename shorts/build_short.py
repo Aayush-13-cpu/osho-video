@@ -113,9 +113,12 @@ def compose_beat(i, beat, start, dur):
     """One beat's SVG scene plus its absolute-timed anims."""
     p = f"b{i}"
     parts, anims = [], []
-    m, a = kit.sky(p, beat.get("sky", "day"), not any(c["k"] == "moon" for c in beat.get("cast", []))); parts.append(m); anims += a
-    m, a = kit.ground(p, beat.get("ground", "hills")); parts.append(m); anims += a
+    sky, gnd = beat.get("sky", "day"), beat.get("ground", "hills")
+    back, anims = kit.sky(p, sky, not any(c["k"] == "moon" for c in beat.get("cast", [])))
+    land, a = kit.ground(p, gnd); anims += a
+    near, a = kit.foreground(p, gnd, sky); anims += [dict(x, at=0) for x in a]
     cast = beat.get("cast", [])
+    r = kit.rng(i * 101 + 7)
     inner = {j: [] for j in range(len(cast))}
     drawn = {}
     for j, c in enumerate(cast):
@@ -128,6 +131,8 @@ def compose_beat(i, beat, start, dur):
             anims.append(dict(act, t=f"#{pid}", x0=c.get("x", 540), y0=c.get("y", kit.FEET)))
         if c["k"] == "master":
             anims.append({"t": f"#{pid}-glow", "do": "glow"})
+        if c["k"] in kit.PEOPLE:  # everyone alive sways a little, each on their own breath
+            anims.append({"t": f"#{pid}", "do": "idle", "period": round(3.6 + r() * 1.4, 2), "phase": round(r() * 1.5, 2)})
     for j in reversed(range(len(cast))):  # children drawn inside their parent so they move with it (people in a boat)
         c = cast[j]
         if drawn[j] is None:
@@ -138,13 +143,29 @@ def compose_beat(i, beat, start, dur):
     parts += [drawn[j] for j in depth_order(cast, kit.FEET)]
     for name in beat.get("fx", []):
         m, a = kit.fx(p, name); parts.append(m); anims += [dict(x, at=0) for x in a]
+    if not set(beat.get("fx", [])) & {"rain", "lightning", "petals", "fireflies", "sparkle"}:
+        m, a = kit.motes(p, sky); parts.append(m); anims += [dict(x, at=0) for x in a]
     for x in anims:  # relative beat times -> absolute timeline times
         x["s"] = round(start + x.pop("at", 0), 3)
         x["d"] = round(x.pop("dur", start + dur - x["s"] - 0.05), 3)
         x["b0"] = start
+    # multiplane layers, back to front: the camera moves each at its own rate (sky slowest, foreground fastest)
+    layers = [back, land, "".join(parts), near]
     svg = (f'<svg id="{p}-svg" class="stage" viewBox="0 0 {kit.W} {kit.H}" xmlns="http://www.w3.org/2000/svg">'
-           f'{"".join(parts)}</svg>')
+           + "".join(f'<g id="{p}-L{k}">{m}</g>' for k, m in enumerate(layers)) + '</svg>')
     return svg, anims
+
+
+def focus(beat):
+    """Where the beat's main figure stands, as a fraction of the width (a person first, else the first prop; the
+    middle of a walk), for medium shots; None when there is no one to frame."""
+    cs = [c for c in beat.get("cast", []) if "in" not in c and c["k"] != "crowd"]
+    c = next((c for c in cs if c["k"] in kit.PEOPLE), cs[0] if cs else None)
+    if c is None:
+        return None
+    to = next((a["to"] for a in c.get("acts", []) if a["do"] in ("walk", "run", "roll") and "to" in a), None)
+    x = c.get("x", 540) if to is None else (c.get("x", 540) + to) / 2
+    return round(x / kit.W, 3)
 
 
 CSS = {  # page-level colours per style (the scene colours live in kit.STYLES)
@@ -181,7 +202,8 @@ def render_html(story, voice, slots, total, words=None):
                    f'<span id="cap-{i}-t">{" ".join(f"<span class=w>{e(w)}</span>" for w in t.split())}</span></div>'
                    for i, (s, d, t, _) in enumerate(cl))
     last = slots[-1][0]
-    plan = {"beats": [{"id": f"beat-{i}", "s": s, "d": d, "x": cont[i]} for i, (s, d) in enumerate(slots)], "xf": XF,
+    plan = {"beats": [{"id": f"beat-{i}", "p": f"b{i}", "s": s, "d": d, "x": cont[i], "f": focus(b)}
+                      for i, (b, (s, d)) in enumerate(zip(beats, slots))], "xf": XF,
             "anims": anims, "caps": [w for *_, w in cl], "total": total, "last": last}
     return TEMPLATE.format(
         title=e(story["title"]), total=total, sections="\n".join(sections), caps=caps, plan=json.dumps(plan),
@@ -243,9 +265,15 @@ TEMPLATE = """<!doctype html>
       if (r !== null) tl.to(t + "-ar", {{ rotation: r, duration: d, ease: "power2.inOut" }}, s);
     }};
     const bob = (t, s, d, p, h) => tl.to(t + "-b", {{ y: -h, duration: p / 2, repeat: n(d, p / 2), yoyo: true, ease: "sine.inOut" }}, s);
+    const swing = (t, s, d, p, deg) => {{
+      tl.fromTo(t + "-al", {{ rotation: 10 - deg }}, {{ rotation: 10 + deg, duration: p, repeat: n(d, p), yoyo: true, ease: "sine.inOut", immediateRender: false }}, s);
+      tl.fromTo(t + "-ar", {{ rotation: -10 + deg }}, {{ rotation: -10 - deg, duration: p, repeat: n(d, p), yoyo: true, ease: "sine.inOut", immediateRender: false }}, s);
+      tl.to(t + "-al", {{ rotation: 10, duration: 0.6, ease: "back.out(2.2)" }}, s + d);
+      tl.to(t + "-ar", {{ rotation: -10, duration: 0.6, ease: "back.out(2.2)" }}, s + d);
+    }};
     const F = {{
-      walk: a => {{ tl.to(a.t, {{ x: a.to, duration: a.d, ease: "sine.inOut" }}, a.s); bob(a.t, a.s, a.d, 0.62, 7); }},
-      run: a => {{ tl.to(a.t, {{ x: a.to, duration: a.d, ease: "power1.inOut" }}, a.s); bob(a.t, a.s, a.d, 0.36, 12); }},
+      walk: a => {{ tl.to(a.t, {{ x: a.to, duration: a.d, ease: "sine.inOut" }}, a.s); bob(a.t, a.s, a.d, 0.62, 7); swing(a.t, a.s, a.d, 0.62, 16); }},
+      run: a => {{ tl.to(a.t, {{ x: a.to, duration: a.d, ease: "power1.inOut" }}, a.s); bob(a.t, a.s, a.d, 0.36, 12); swing(a.t, a.s, a.d, 0.36, 32); }},
       climb: a => {{ tl.to(a.t, {{ y: a.to, duration: a.d, ease: "power1.inOut" }}, a.s); }},
       raise: a => arms(a.t, 140, -140, a.s, 0.8),
       bless: a => arms(a.t, null, -125, a.s, 0.8),
@@ -299,17 +327,37 @@ TEMPLATE = """<!doctype html>
                    tl.fromTo(a.t + "-c", {{ x: 120 }}, {{ x: -120, duration: a.d, ease: "sine.inOut", immediateRender: false }}, a.s); }},
       ripples: a => tl.fromTo(a.t + " ellipse", {{ scale: 0.2, opacity: 0.9 }}, {{ scale: 1.8, opacity: 0, duration: 3, ease: "sine.out",
                   transformOrigin: "50% 50%", stagger: {{ each: 1, repeat: n(a.d - 2, 3) }}, immediateRender: false }}, a.s),
+      // a living figure is never quite still: the body sways on its breath and the robe's hem follows a beat later
+      idle: a => {{ const p = a.period || 4.2, s = a.s + (a.phase || 0), d = Math.max(0, a.d - (a.phase || 0));
+                   tl.fromTo(a.t + "-s", {{ rotation: -0.7 }}, {{ rotation: 0.7, duration: p / 2, repeat: n(d, p / 2), yoyo: true, ease: "sine.inOut",
+                             transformOrigin: "50% 100%", immediateRender: false }}, s);
+                   tl.fromTo(a.t + "-r", {{ skewX: -1.6 }}, {{ skewX: 1.6, duration: p / 2, repeat: n(d - p * 0.2, p / 2), yoyo: true, ease: "sine.inOut",
+                             transformOrigin: "50% 0%", immediateRender: false }}, s + p * 0.2); }},
+      sway: a => tl.fromTo(a.t, {{ rotation: -1.2 }}, {{ rotation: 1.2, duration: 2.6, repeat: n(a.d, 2.6), yoyo: true, ease: "sine.inOut",
+                 transformOrigin: "0% 0%", immediateRender: false }}, a.s),
+      motes: a => {{ tl.fromTo(a.t, {{ y: 30 }}, {{ y: -90, duration: a.d, ease: "none", immediateRender: false }}, a.s);
+                    tl.fromTo(a.t, {{ x: -18 }}, {{ x: 18, duration: 3.2, repeat: n(a.d, 3.2), yoyo: true, ease: "sine.inOut", immediateRender: false }}, a.s);
+                    tl.fromTo(a.t + " circle", {{ opacity: 0.1 }}, {{ opacity: 0.8, duration: 1.6, ease: "sine.inOut",
+                              stagger: {{ each: 0.35, repeat: n(a.d - 6.3, 1.6), yoyo: true }}, immediateRender: false }}, a.s); }},
       fireflies: a => {{ tl.fromTo(a.t + " circle", {{ opacity: 0.1 }}, {{ opacity: 1, duration: 0.9, ease: "sine.inOut",
                           stagger: {{ each: 0.11, repeat: n(a.d - 4.4, 0.9), yoyo: true }}, immediateRender: false }}, a.s);
                         tl.fromTo(a.t, {{ y: 0 }}, {{ y: -60, duration: a.d, ease: "none", immediateRender: false }}, a.s); }},
     }};
-    // Never a dip to black: a new setting cuts, the same setting dissolves scene over scene (b.x). Each shot gets a
-    // slow eased camera move, alternating push-in, pull-out and pans; pans stay inside the zoom's overflow.
-    const CAM = [[1.24, 1.30, 0, 0], [1.31, 1.25, 0, 0], [1.28, 1.28, -48, 48], [1.28, 1.28, 48, -48]];
+    // Never a dip to black: a new setting cuts, the same setting dissolves scene over scene (b.x). Each shot is a slow
+    // eased camera move on a multiplane set: wide push-ins and pull-outs, medium shots framed on the main figure, and
+    // pans. The sky lags the camera, the far land lags less, the foreground branch leads: depth, like a rostrum camera.
+    // Pans stay inside the zoom's overflow; [scale from, scale to, x from, x to, medium].
+    const SHOTS = [[1.22, 1.30, -20, 20, 0], [1.46, 1.54, 0, 0, 1], [1.28, 1.28, -48, 48, 0],
+                   [1.32, 1.24, 20, -20, 0], [1.52, 1.44, 12, -12, 1], [1.28, 1.28, 48, -48, 0]];
+    const DEPTH = [["-L0", -0.6], ["-L1", -0.3], ["-L3", 0.6]];
     PLAN.beats.forEach((b, i) => {{
-      const [s0, s1, x0, x1] = CAM[i % CAM.length];
-      tl.fromTo("#" + b.id + "-in", {{ scale: s0, x: x0 }}, {{ scale: s1, x: x1, duration: b.d, ease: "sine.inOut", transformOrigin: "50% 72%",
-                immediateRender: false }}, b.s);
+      let [s0, s1, x0, x1, med] = SHOTS[i % SHOTS.length];
+      if (med && b.f === null) {{ s0 -= 0.24; s1 -= 0.24; }}  // nobody to frame: stay wide
+      const ox = med && b.f !== null ? Math.min(0.7, Math.max(0.3, b.f)) : 0.5, k = (s1 - s0) / s1;
+      tl.fromTo("#" + b.id + "-in", {{ scale: s0, x: x0 }}, {{ scale: s1, x: x1, duration: b.d, ease: "sine.inOut",
+                transformOrigin: (ox * 100) + "% 72%", immediateRender: false }}, b.s);
+      DEPTH.forEach(([L, f]) => tl.fromTo("#" + b.p + L, {{ x: f * x0, scale: 1 }}, {{ x: f * x1, scale: 1 + f * k, duration: b.d, ease: "sine.inOut",
+                svgOrigin: (ox * {W}) + " " + (0.72 * {H}), immediateRender: false }}, b.s));
       if (b.x) tl.fromTo("#" + b.id + "-in", {{ opacity: 0 }}, {{ opacity: 1, duration: PLAN.xf, ease: "none", immediateRender: false }}, b.s);
     }});
     PLAN.anims.forEach(a => F[a.do](a));
@@ -341,7 +389,7 @@ def main(story_id):
     voice, slots, total, words = narrate(story, out)
     if total > MAX_TOTAL:
         sys.exit(f"{story_id}: {total:.1f} s is over the {MAX_TOTAL} s Shorts limit; trim its narration")
-    music(total, os.path.join(out, "assets", "music.wav"))
+    music(total, os.path.join(out, "assets", "music.wav"), voice=os.path.join(out, "assets", "voice.wav"))
     open(os.path.join(out, "index.html"), "w", encoding="utf-8").write(render_html(story, voice, slots, total, words))
     print(f"{story_id}: {len(slots)} beats, {total:.1f} s -> {out}")
 

@@ -12,7 +12,7 @@ FEET = 1390              # where characters on the near ground stand
 
 SKIES = {  # top, middle, horizon colours, and an optional sun/moon (kind, x, y, radius)
     "dawn": ("#2a3550", "#b88a7a", "#f3d2a6", ("sun", 760, 1170, 70)),        # misty dawn
-    "day": ("#4a78a8", "#a9c6d8", "#f5e4bd", ("sun", 820, 470, 58)),
+    "day": ("#4a78a8", "#a9c6d8", "#f5e4bd", ("sun", 930, 430, 58)),
     "dusk": ("#3a1c2e", "#b8502e", "#f6a040", ("sun", 300, 1160, 110)),       # saffron dusk
     "night": ("#070820", "#1a1c4a", "#35306a", ("moon", 800, 400, 52)),       # indigo night
     "storm": ("#0b0e15", "#262e3b", "#465163", None),
@@ -26,7 +26,7 @@ SILHOUETTE = dict(ink=INK, skies=SKIES, c=dict(wave="#dfe8ff", sea="#3a4a6a", ho
 INKWASH = dict(ink="#1a1714", c=dict(wave="#4a4540", sea="#c9bfae", hole="#2a2420", rain="#5a544c", rays="#fffaf0",
                                      spark="#a3302a", star="#6b625a", sun="#a3302a", moon="#f6f1e6", rim="#f7f2e8",
                                      petal="#c2534a", mist="#f7f3ea", fly="#a3302a"),
-               skies={"day": ("#efe8da", "#e6dccb", "#d9cfbd", ("sun", 820, 470, 58)),
+               skies={"day": ("#efe8da", "#e6dccb", "#d9cfbd", ("sun", 930, 430, 58)),
                       "dawn": ("#efe8da", "#e8dccb", "#dccbb4", ("sun", 760, 1170, 70)),
                       "dusk": ("#ece2d2", "#e0cdb4", "#cfb79a", ("sun", 300, 1160, 110)),
                       "night": ("#d6cebf", "#cbc2b2", "#bdb3a2", ("moon", 800, 400, 52)),
@@ -282,34 +282,38 @@ PROPS = {
 
 
 def person(pid, kind, p, rim=True):
-    """A robed figure 190 units tall: body group -b (for bob/sit/lie), drawing group -s (breathe), arm groups
-    -al / -ar (for gestures). Faces are never drawn; each kind differs only by its outline (robe, hat, turban...).
-    The thin rim light keeps overlapping silhouettes (a figure before a house, two people passing) apart as layers."""
-    if kind == "master":  # a long, wide robe
-        parts = ['<path d="M-40 0 C-36 -60 -28 -118 -18 -150 Q0 -160 18 -150 C28 -118 36 -60 40 0 Z"/>']
-    elif kind == "dancer":  # a skirt that flares as she turns
-        parts = ['<path d="M-74 0 Q-40 -50 -20 -110 C-20 -130 -17 -145 -17 -150 Q0 -160 17 -150 C17 -145 20 -130 20 -110 '
-                 'Q40 -50 74 0 Z"/>']
-    elif kind == "samurai":  # broad shoulders and a wide hakama
-        parts = ['<path d="M-42 0 C-34 -60 -30 -110 -30 -150 Q0 -160 30 -150 C30 -110 34 -60 42 0 Z"/>']
-    else:
-        parts = ['<path d="M-30 0 C-28 -60 -24 -118 -17 -150 Q0 -160 17 -150 C24 -118 28 -60 30 0 Z"/>']
-    parts.append('<circle cx="0" cy="-172" r="15"/>')
+    """A robed figure 190 units tall: body group -b (for bob/sit/lie), drawing group -s (breathe, idle sway), robe
+    group -r (its hem trails the body: overlapping action), arm groups -al / -ar (sleeves with hands, rotating at the
+    shoulder). Faces are never drawn; each kind differs only by its outline (robe, hat, turban...). The thin rim
+    light keeps overlapping silhouettes apart as layers; faint folds in the rim colour give the cloth some form."""
+    robe = {"master": "M-42 0 C-38 -50 -31 -100 -25 -128 C-22 -141 -14 -148 -6 -150 L6 -150 C14 -148 22 -141 25 -128 "
+                      "C31 -100 38 -50 42 0 Q0 9 -42 0 Z",
+            "dancer": "M-74 0 Q-44 -46 -22 -104 C-20 -126 -14 -146 -6 -149 L6 -149 C14 -146 20 -126 22 -104 Q44 -46 74 0 "
+                      "Q0 10 -74 0 Z",
+            "samurai": "M-44 0 C-38 -55 -34 -105 -33 -140 Q-30 -150 -8 -151 L8 -151 Q30 -150 33 -140 C34 -105 38 -55 44 0 "
+                       "Q0 7 -44 0 Z"}.get(kind, "M-31 0 C-29 -45 -27 -95 -23 -126 C-21 -140 -14 -147 -6 -149 L6 -149 "
+                                                 "C14 -147 21 -140 23 -126 C27 -95 29 -45 31 0 Q0 7 -31 0 Z")
+    folds = (f'<path d="M-6 -122 C-9 -82 -11 -42 -14 2 M9 -112 C11 -72 13 -36 16 2" fill="none" stroke="{C["rim"]}" '
+             f'stroke-opacity="0.13" stroke-width="2.2"/>')
+    parts = [f'<g id="{pid}-r" class="robe"><path d="{robe}"/>{folds}</g>',
+             '<path d="M-6 -146 L-5 -158 L5 -158 L6 -146 Z"/><ellipse cx="0" cy="-171" rx="13.5" ry="16"/>']
     if kind == "woman":
-        parts.append('<path d="M-18 -180 Q0 -202 18 -180 L24 -138 L-24 -138 Z"/>')
+        parts.append('<path d="M-18 -181 Q0 -203 18 -181 L25 -136 Q0 -128 -25 -136 Z"/>')
     if kind == "nun":
-        parts.append('<path d="M-20 -182 Q0 -206 20 -182 L32 -116 L-32 -116 Z"/>')
+        parts.append('<path d="M-20 -183 Q0 -207 20 -183 L33 -114 Q0 -106 -33 -114 Z"/>')
     if kind == "elder":
-        parts.append('<path d="M38 2 L38 -205 Q38 -228 56 -222" fill="none" stroke="currentColor" stroke-width="6"/>')
+        parts.append('<path d="M38 2 L38 -205 Q38 -228 56 -222" fill="none" stroke="currentColor" stroke-width="6" '
+                     'stroke-linecap="round"/>')
     if kind == "farmer":
-        parts.append('<path d="M-50 -176 L0 -204 L50 -176 Z"/>')
+        parts.append('<path d="M-52 -176 Q0 -214 52 -176 Q0 -184 -52 -176 Z"/>')
     if kind == "nasruddin":  # turban and beard
-        parts.append('<ellipse cx="0" cy="-188" rx="22" ry="15"/><path d="M-12 -164 Q0 -134 12 -164 Z"/>')
+        parts.append('<ellipse cx="0" cy="-189" rx="23" ry="15"/><path d="M-12 -163 Q0 -132 12 -163 Z"/>')
     if kind == "samurai":  # topknot and a sword at the hip
-        parts.append('<circle cx="0" cy="-192" r="6"/><path d="M-36 -70 L44 -120" stroke="currentColor" stroke-width="6"/>')
-    arm = '<path d="M-5 0 L5 0 L4 74 L-4 74 Z"/>'
-    parts.append(f'<g id="{pid}-al" class="arm-l" transform="translate(-15,-146)">{arm}</g>'
-                 f'<g id="{pid}-ar" class="arm-r" transform="translate(15,-146)">{arm}</g>')
+        parts.append('<circle cx="0" cy="-193" r="6"/><path d="M-36 -70 L44 -120" stroke="currentColor" stroke-width="6" '
+                     'stroke-linecap="round"/>')
+    arm = '<path d="M-6 -2 C-8 22 -11 46 -14 64 Q-1 70 12 64 C9 46 7 22 6 -2 Z"/><ellipse cx="-1" cy="72" rx="5" ry="6.5"/>'
+    parts.append(f'<g id="{pid}-al" class="arm-l" transform="translate(-15,-144)">{arm}</g>'
+                 f'<g id="{pid}-ar" class="arm-r" transform="translate(15,-144)">{arm}</g>')
     edge = f' stroke="{C["rim"]}" stroke-width="1.8" stroke-opacity="0.55"' if rim else ""
     return f'<g id="{pid}-s" fill="{INK}" color="{INK}"{edge}>{"".join(parts)}</g>'
 
@@ -394,3 +398,46 @@ def fx(p, name):
 
 FX = {"rain", "lightning", "rays", "sparkle", "petals", "mist", "ripples", "fireflies"}
 GROUNDS = ("hills", "field", "desert", "city", "sea", "garden", "forest", "river", "zen", "mountain")
+
+
+def _seed(text):
+    return sum((i + 1) * ord(ch) for i, ch in enumerate(text))
+
+
+def foreground(p, ground_name, sky_name):
+    """A branch hanging into the top corner, nearest to the camera (the multiplane foreground: it moves fastest), in
+    front of the sky and away from the sun or moon; seeded by the setting, so beats that dissolve within one setting
+    keep the same branch. Leafy over hills, fields, gardens, forest and water, a pine bough over mountains and
+    the zen garden; none in the desert or the village. Returns (markup, anims)."""
+    kind = {"hills": "leaf", "field": "leaf", "garden": "leaf", "forest": "leaf", "mountain": "pine", "zen": "pine",
+            "river": "leaf", "sea": "leaf"}.get(ground_name)
+    r = rng(_seed(ground_name + sky_name))
+    if not kind or r() > 0.75:
+        return "", []
+    orb = SKIES[sky_name][3]
+    left = orb[1] > W / 2 if orb else r() < 0.5
+    # down the side of the frame: under the title band, outside the captions (the zoom maps x 230 to ~150 px)
+    limb = f'<path d="M-60 170 C40 250 125 390 205 610 L193 616 C105 400 25 275 -60 232 Z" fill="{INK}"/>'
+    twigs = "".join(f'<path d="M{x:.0f} {y:.0f} q{14 + r() * 14:.0f} {6 + r() * 12:.0f} {30 + r() * 20:.0f} '
+                    f'{24 + r() * 20:.0f}" fill="none" stroke="{INK}" stroke-width="4" stroke-linecap="round"/>'
+                    for x, y in [(10, 226), (85, 330), (150, 470)])
+    pts = [(min(235, -30 + 240 * t + (r() - 0.5) * 70), 210 + 390 * t + (r() - 0.5) * 50) for t in [r() for _ in range(34)]]
+    if kind == "leaf":
+        tips = "".join(f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="{13 + r() * 9:.0f}" ry="{6 + r() * 3:.0f}" '
+                       f'transform="rotate({r() * 180:.0f} {x:.0f} {y:.0f})"/>' for x, y in pts)
+    else:  # pine: fans of needles
+        tips = "".join(f'<path d="{" ".join(f"M{x:.0f} {y:.0f} l{26 * math.cos(a):.0f} {26 * math.sin(a):.0f}" for a in [math.pi * (0.95 + 0.11 * k) for k in range(10)])}" '
+                       f'stroke="{INK}" stroke-width="3" stroke-linecap="round"/>' for x, y in pts[:16])
+    art = f'{limb}{twigs}<g fill="{INK}">{tips}</g>'
+    flip = "" if left else f' transform="translate({W},0) scale(-1,1)"'
+    return (f'<g{flip}><g id="{p}-fg" class="fgb">{art}</g></g>', [{"t": f"#{p}-fg", "do": "sway"}])
+
+
+def motes(p, sky_name):
+    """Dust in the light: a few soft specks drifting up and glinting (seeded). Warm light on silhouette skies, faint
+    ink specks on rice paper. Returns (markup, anims)."""
+    r = rng(_seed(p + sky_name))
+    col, op = (INK, 0.35) if INK == INKWASH["ink"] else ((C["star"] if sky_name in ("night", "storm") else C["spark"]), 0.6)
+    dots = "".join(f'<circle cx="{r() * W:.0f}" cy="{380 + r() * 980:.0f}" r="{1.6 + r() * 2.6:.1f}" '
+                   f'opacity="{0.15 + r() * 0.5:.2f}"/>' for _ in range(18))
+    return f'<g id="{p}-motes" fill="{col}" opacity="{op}">{dots}</g>', [{"t": f"#{p}-motes", "do": "motes"}]

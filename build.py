@@ -64,15 +64,20 @@ ICONS = {
 }
 
 
+VOICE_MAKEUP = 12.5  # dB: the compressor and room cost this much; measured with ebur128
+
+
 def vintage(path):
-    """The voice as a good room recording from around 1990, in place: tape/microphone bandwidth, a broadcast
-    cassette's evenness, a small hall, makeup gain back to the clean level, and faint seeded hiss (same on every
-    rebuild). Run after word_times(): Whisper is more accurate on the clean clips."""
+    """The voice as a warm, close room recording from around 1990, in place: a gentle tape roll-off (still open
+    enough to sound clear), soft sibilants, a broadcast compressor's evenness, a short warm room, a little body at
+    200 Hz, makeup gain back to the clean level, and a faint seeded hiss (same on every rebuild). Run after
+    word_times(): Whisper is more accurate on the clean clips."""
     tmp = path + ".tmp.wav"
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", path, "-filter_complex",
-                    "[0:a]highpass=f=90,lowpass=f=8500,acompressor=threshold=-20dB:ratio=3:attack=15:release=250,"
-                    "aecho=0.8:0.5:35|70:0.18|0.10,volume=11dB[v];"  # the echo and compressor cost ~11 dB
-                    "anoisesrc=color=pink:amplitude=0.003:seed=7:sample_rate=24000[n];"
+                    "[0:a]highpass=f=75,lowpass=f=11000,deesser=i=0.4,equalizer=f=200:t=q:w=1:g=2,"
+                    "acompressor=threshold=-20dB:ratio=2.5:attack=15:release=250,"
+                    f"aecho=0.8:0.4:30|55:0.12|0.07,volume={VOICE_MAKEUP}dB[v];"  # back to the old chain's level
+                    "anoisesrc=color=pink:amplitude=0.0012:seed=7:sample_rate=24000[n];"
                     "[v][n]amix=inputs=2:duration=first:normalize=0", tmp], check=True)
     os.replace(tmp, path)
 
@@ -109,21 +114,38 @@ def timings(voice_secs):
     return slots
 
 
-def music(total, out="assets/music.wav"):
-    """A tanpura-style drone (Pa, Sa', Sa', Sa plucked 1.2 s apart over a quiet Sa+Pa pad) and a singing bowl every
-    16 s, generated, so no licensed audio is needed."""
-    plucks = []
-    for i, f in enumerate((196.00, 261.63, 261.63, 130.81)):  # each string rings for its whole 4.8 s cycle
-        tau = f"mod(t+{4.8 - 1.2 * i:.1f},4.8)"
-        plucks.append(f"exp(-0.9*{tau})*(sin(2*PI*{f}*t)+0.5*sin(2*PI*{2 * f}*t)+0.25*sin(2*PI*{3 * f}*t))")
-    pad = "(0.8+0.2*sin(2*PI*t/9))*(sin(2*PI*65.41*t)+0.6*sin(2*PI*130.81*t)+0.4*sin(2*PI*196.00*t))"
-    # inharmonic bowl partials f, 2.76f, 5.40f; the fundamental doubled 0.6 Hz apart so it beats slowly
-    bowl = ("min(1,mod(t,16)*30)*exp(-0.35*mod(t,16))*(sin(2*PI*220*t)+0.6*sin(2*PI*220.6*t)+0.4*sin(2*PI*607.2*t)"
-            "+0.2*sin(2*PI*1188*t))")
-    expr = f"0.017*({'+'.join(plucks)})+0.011*{pad}+0.017*{bowl}"  # ~20 LU under the voice (ebur128)
-    subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", f"aevalsrc='{expr}':s=48000:d={total}", "-af",
-                    f"lowpass=f=1800,aecho=0.8:0.6:400|800:0.35|0.2,afade=t=in:d=2,afade=t=out:st={total - 3}:d=3,"
-                    "pan=stereo|c0=c0|c1=c0", out], check=True)
+PAD, SHIMMER, BOWL, SURF = 0.010, 0.0025, 0.012, 0.006  # relative levels inside the bed (set by ear + ebur128)
+MUSIC_GAIN = 2.2                                         # whole-bed level; see the calibration note in music()
+
+
+def music(total, out="assets/music.wav", voice=None):
+    """A healing bed, generated (no licensed audio): a slow chorused pad breathing between two open chords (C add9,
+    A minor 7, 20 s each, cross-faded), a faint shimmer two octaves up, a soft singing bowl every 24 s, and brown noise
+    swelling like distant surf, all in a long hall. With `voice` (a wav, or a video with the narration) the bed ducks
+    under the speech and swells back in the pauses, so it can sit closer than a fixed level allows."""
+    chords = ((130.81, 196.00, 293.66, 329.63), (110.00, 164.81, 261.63, 392.00))
+
+    def pad(det):  # each note is two sines `det` Hz apart (a slow chorus); higher notes softer
+        ch = ["+".join(f"{1 / (1 + 0.6 * k):.2f}*(sin(2*PI*{f + det:.2f}*t)+sin(2*PI*{f - det:.2f}*t))"
+                       for k, f in enumerate(fs)) for fs in chords]
+        w = "(0.5+0.5*cos(2*PI*t/40))"
+        return f"(0.85+0.15*sin(2*PI*t/13))*({w}*({ch[0]})+(1-{w})*({ch[1]}))"
+    shimmer = "(0.5+0.5*sin(2*PI*t/7))*sin(2*PI*1046.5*t)+(0.5+0.5*sin(2*PI*t/11+1))*sin(2*PI*1568*t)"
+    # inharmonic bowl partials f, 2.76f, 5.40f; the fundamental doubled 0.5 Hz apart so it beats slowly
+    bowl = ("min(1,mod(t,24)*20)*exp(-0.18*mod(t,24))*(sin(2*PI*196*t)+0.7*sin(2*PI*196.5*t)+0.35*sin(2*PI*541*t)"
+            "+0.15*sin(2*PI*1058*t))")
+    side = [f"{MUSIC_GAIN}*({PAD}*{pad(d)}+{SHIMMER}*({shimmer})+{BOWL}*{bowl})" for d in (0.15, 0.22)]  # L/R: width
+    graph = (f"[0:a]lowpass=f=2600,aecho=0.8:0.85:120|240|480|900:0.35|0.25|0.18|0.1[m];"
+             f"[1:a]lowpass=f=450,highpass=f=60,volume='{MUSIC_GAIN * SURF}*(0.6+0.4*sin(2*PI*t/9))':eval=frame,"
+             f"pan=stereo|c0=c0|c1=c0[n];[m][n]amix=inputs=2:duration=first:normalize=0")
+    cmd = ["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", f"aevalsrc='{side[0]}|{side[1]}':s=48000:d={total}",
+           "-f", "lavfi", "-i", f"anoisesrc=color=brown:amplitude=1:seed=3:sample_rate=48000:d={total}"]
+    if voice:
+        cmd += ["-i", voice]
+        graph += (f"[bed];[2:a]aresample=48000,aformat=channel_layouts=stereo,apad=whole_dur={total}[k];"
+                  "[bed][k]sidechaincompress=threshold=0.03:ratio=3:attack=100:release=650")
+    graph += f",afade=t=in:d=3,afade=t=out:st={max(0, total - 4)}:d=4"
+    subprocess.run(cmd + ["-filter_complex", graph, "-t", str(total), out], check=True)
 
 
 def _spread(times, words, dur):
@@ -291,7 +313,7 @@ TEMPLATE = """<!doctype html>
 def main():
     data = json.load(open("script.json", encoding="utf-8"))
     slots, total = narrate(data["scenes"])
-    music(total)
+    music(total, voice="assets/voice.wav")
     open("index.html", "w", encoding="utf-8").write(render_html(data, data["scenes"], slots, total))
     print(f"index.html: {len(slots)} scenes, {total:.1f} s")
 

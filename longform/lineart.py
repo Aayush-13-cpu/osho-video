@@ -93,7 +93,7 @@ def background(p, sky, moon=True):
            f'<stop offset="1" stop-color="{T["glow"]}" stop-opacity="0"/></radialGradient>'
            f'<filter id="{p}-glow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="5" result="b"/>'
            f'<feMerge><feMergeNode in="b"/><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>',
-           f'<rect width="{W}" height="{H}" fill="url(#{p}-sky)"/>',
+           f'<rect x="-120" y="-90" width="{W + 240}" height="{H + 180}" fill="url(#{p}-sky)"/>',
            f'<circle cx="{W // 2}" cy="{HZ - 220}" r="720" fill="url(#{p}-halo)" opacity="{0.22 if sky == "storm" else 0.4}"/>']
     anims = []
     c = T["line"]
@@ -312,7 +312,7 @@ def person(pid, kind):
             "dancer": "M-74 0 Q-40 -50 -20 -110 C-20 -130 -17 -145 -17 -150 Q0 -160 17 -150 C17 -145 20 -130 20 -110 Q40 -50 74 0 Z",
             "samurai": "M-42 0 C-34 -60 -30 -110 -30 -150 Q0 -160 30 -150 C30 -110 34 -60 42 0 Z"}.get(
         kind, "M-30 0 C-28 -60 -24 -118 -17 -150 Q0 -160 17 -150 C24 -118 28 -60 30 0 Z")
-    parts = [f'<path {O} d="{robe}"/><circle {O} cx="0" cy="-172" r="15"/>']
+    parts = [f'<g id="{pid}-r"><path {O} d="{robe}"/></g><circle {O} cx="0" cy="-172" r="15"/>']
     if kind == "woman":
         parts.append(f'<path {N} d="M-26 -136 L-18 -180 Q0 -204 18 -180 L26 -136"/>')
     if kind == "nun":
@@ -406,3 +406,11 @@ def fx(p, name):
 
 
 FX = {"rain", "lightning", "rays", "sparkle", "dove", "petals", "mist", "ripples", "fireflies"}
+
+
+def motes(p, sky):
+    """Dust in the light: a few specks of the line colour drifting up and glinting, inside the glow (seeded)."""
+    r = rng(sum((i + 1) * ord(ch) for i, ch in enumerate(p + sky)))
+    dots = "".join(f'<circle cx="{r() * W:.0f}" cy="{120 + r() * (GF - 160):.0f}" r="{1.4 + r() * 2.2:.1f}" '
+                   f'opacity="{0.15 + r() * 0.5:.2f}"/>' for _ in range(22))
+    return f'<g id="{p}-dust" fill="{T["line"]}" opacity="0.7">{dots}</g>', [{"t": f"#{p}-dust", "do": "motes"}]

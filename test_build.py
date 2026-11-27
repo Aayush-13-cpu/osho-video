@@ -1,6 +1,6 @@
 """Self-check without TTS or rendering: python test_build.py  (must print ok)"""
-import json, re
-from build import timings, render_html, ICONS, LEAD, TAIL, MIN_SCENE, era_hits, impersonation_hits
+import json, os, re, subprocess, tempfile
+from build import timings, render_html, ICONS, LEAD, TAIL, MIN_SCENE, era_hits, impersonation_hits, music
 
 data = json.load(open("script.json", encoding="utf-8"))
 scenes = data["scenes"]
@@ -27,4 +27,20 @@ assert lefts[0] == 0 and lefts[-1] == 1560, lefts  # dots sit inside #timeline (
 for s in scenes:  # the trailer too must sound like 1991 and never like one real speaker
     text = " ".join((s["narration"], s["title"], s["quote"]))
     assert not era_hits(text) and not impersonation_hits(text), (s["id"], era_hits(text), impersonation_hits(text))
+
+# the music bed: stereo, exactly as long as asked, and quieter while someone speaks (sidechain duck) than without
+with tempfile.TemporaryDirectory() as tmp:
+    v = os.path.join(tmp, "v.wav")  # a stand-in voice: speech-loud tone from 1 s to 5 s
+    subprocess.run(["ffmpeg", "-v", "error", "-f", "lavfi", "-i", "aevalsrc='0.3*sin(2*PI*220*t)*between(t,1,5)':s=24000:d=6", v], check=True)
+    music(6, os.path.join(tmp, "a.wav"))
+    music(6, os.path.join(tmp, "b.wav"), voice=v)
+    info = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=channels:format=duration", "-of", "csv=p=0",
+                           os.path.join(tmp, "b.wav")], capture_output=True, text=True).stdout.split()
+    assert info[0] == "2" and abs(float(info[1]) - 6) < 0.05, info
+
+    def rms(f):  # dB over 2-4 s, inside the speech
+        out = subprocess.run(["ffmpeg", "-v", "info", "-ss", "2", "-t", "2", "-i", f, "-af", "volumedetect", "-f", "null", "-"],
+                             capture_output=True, text=True).stderr
+        return float(re.search(r"mean_volume: (-?[\d.]+) dB", out).group(1))
+    assert rms(os.path.join(tmp, "b.wav")) < rms(os.path.join(tmp, "a.wav")) - 3, "the bed must duck under the voice"
 print("ok")

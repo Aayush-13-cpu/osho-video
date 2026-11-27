@@ -181,10 +181,12 @@ switches it off.
 
 [FFmpeg](https://ffmpeg.org) does three jobs here:
 
-- **Music from maths.** `music()` in `build.py` uses `aevalsrc` to generate a tanpura-style drone (Pa, upper Sa,
-  upper Sa, Sa plucked 1.2 s apart over a quiet Sa+Pa pad) and a singing bowl every 16 seconds (partials f, 2.76f,
-  5.40f with a slow beat), then a low-pass, an echo and fades. It sits about 20 LU under the voice. No licensed
-  track needed.
+- **Music from maths.** `music()` in `build.py` generates a healing bed with `aevalsrc`: a slow chorused pad
+  breathing between C add9 and A minor 7 (20 s each, cross-faded, left and right detuned apart for width), a faint
+  shimmer two octaves up, a soft singing bowl every 24 s (partials f, 2.76f, 5.40f with a slow beat), and brown
+  noise swelling like distant surf, all in a long hall. Given the narration, it ducks under the speech
+  (`sidechaincompress`) and swells back in the pauses: about 17 dB under the voice between sentences, 21 dB under
+  while speaking. No licensed track needed. `test_build.py` checks the duck.
 - **The vintage texture** on the voice (Chapter 5).
 - **Loudness.** YouTube plays everything at about **−14 LUFS**. Every finished video is normalized with
   `loudnorm=I=-14:TP=-1.5:LRA=11`; the hiss in pauses stays near −57 dBFS after that.
@@ -261,8 +263,14 @@ A story is four **beats**. Each beat is one or two sentences of narration plus t
 3. **Scenes.** `compose_beat()` asks the kit for the sky, the ground, each cast member and the effects, and
    collects their *acts* with absolute times. The master always carries a soft glow.
 4. **The page.** The title card shows from the first frame, the tradition (`"A Zen story"`) closes the last beat.
-5. **Camera and cuts.** Slow eased camera moves; a new setting is a hard cut, the same setting dissolves over
-   0.3 s; never a dip to black.
+5. **Camera and cuts.** A multiplane camera: each beat's scene is four layers (sky `-L0`, far land `-L1`, figures
+   `-L2`, a foreground branch `-L3`) and every slow eased move shifts them at different rates (the sky lags, the
+   branch leads), so the picture has depth. Shots vary: wide push-ins and pull-outs, pans, and medium shots framed
+   on the beat's main figure (`focus()`). A new setting is a hard cut, the same setting dissolves over 0.3 s; never
+   a dip to black. The long videos do the same with sky and land layers and gentler moves.
+5b. **Life.** Every figure sways a little on its own breath (`idle`), and the robe's hem follows a beat later
+   (overlapping action); walking swings the arms and they settle with a small overshoot; dust drifts in the light
+   (`motes`); the branch sways. Figures have a neck, shoulders, bell sleeves with hands and faint robe folds.
 6. **Depth.** Cast drawn back to front (`depth_order()`), a thin rim light between overlapping silhouettes, and a
    faint static grain so gradients don't band.
 
