@@ -1,8 +1,4 @@
 # Long video ids to render (from longform/videos/), one per line.
 # Pushing a change here starts a render; each run becomes one release you can download anywhere.
-# queued 2026-11-27 13:32:20 UTC
+# queued 2026-11-28 07:57:43 UTC
 zen-stories-that-wake-you-up
-love-without-holding
-the-witness-behind-the-mind
-fear-death-and-the-present-moment
-the-way-of-the-tao
