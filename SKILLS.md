@@ -38,7 +38,7 @@ the Release). These skills check and sharpen them.
 | Skill | Use it for |
 |---|---|
 | `/code-review` | Review your changes for bugs before you push (renders cost a cloud run, so catch mistakes first) |
-| `/ecc:python-review` | Python-specific review of `build_short.py`, `build_long.py`, `kit.py`, `lineart.py` |
+| `/ecc:python-review` | Python-specific review of `build_short.py`, `build_long.py`, `paper.py`, `paper.js` |
 | `/ponytail` | Keep changes small: the simplest fix that works, no new dependencies (already installed) |
 | `/ecc:verification-loop` | A full check (tests, lint, diff review) before a release |
 | `/ecc:github-ops` | Workflow runs, failed jobs, releases and artifacts on GitHub |

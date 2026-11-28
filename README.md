@@ -7,8 +7,8 @@ meditations for the **TapoBhumi** channel, with **free, open-source tools**, and
 computers instead of yours**. It contains:
 
 - **The channel trailer**: a 2-minute horizontal video, thirteen scenes with line icons (`script.json`, `build.py`).
-- **80 story Shorts**: vertical 40–55 second animations in two visual styles, silhouette and sumi-e ink (`shorts/`).
-- **10 long videos**: horizontal 10–12 minute talks in glowing line art, each ending in a guided meditation
+- **80 story Shorts**: vertical 40–55 second animations in a colourful paper pop-up style (`shorts/`).
+- **10 long videos**: horizontal 10–12 minute talks in the same paper pop-up style, each ending in a guided meditation
   (`longform/`). See [The long videos](#the-long-videos).
 
 The videos explain Osho's teachings in the third person ("Osho taught...", never speaking as him). The narration
@@ -56,7 +56,7 @@ from this repository.
 8. [The map of files](#8-the-map-of-files)
 9. [The channel trailer, step by step](#9-the-channel-trailer-step-by-step)
 10. [The story Shorts, step by step](#10-the-story-shorts-step-by-step)
-11. [The silhouette and ink kit](#11-the-silhouette-and-ink-kit)
+11. [The paper pop-up kit](#11-the-paper-pop-up-kit)
 12. [The animation interpreter](#12-the-animation-interpreter)
 13. [The cloud pipeline](#13-the-cloud-pipeline)
 
@@ -152,7 +152,7 @@ joins the pictures and the sound into an MP4. A page has to follow a small contr
 - **The timeline is registered** under the composition's id, *after* the fonts load and every tween is added.
 - **Determinism.** Frames may be photographed in any order, so frame 412 must look the same every time: no clock,
   no unseeded `Math.random()`, no infinite repeats, nothing loading late. Stars, petals and fireflies come from a
-  seeded generator (`kit.rng`).
+  seeded generator (`paper.rng`).
 - **Commands:** `npx hyperframes lint` (rules, instant), `npx hyperframes snapshot --at 2,12` (still frames for a
   quick look) and `npx hyperframes render` (the video; in this project only the cloud runs it).
 
@@ -210,19 +210,19 @@ generate.py                 one command for the channel: picks, queues, waits, d
 generated.txt               what has been made: "<long|short> <id> <date>" per line
 script.json                 the channel trailer's 13 scenes (label, title, quote, tradition, icon, narration)
 build.py                    the trailer builder + shared music(), word_times(), vintage(), era lint
+paper.py                    the paper pop-up kit for every video: skies, grounds, props, people, effects, scene()
+paper.js                    the paper pop-up motion: page turns, pop-ups, camera, and every verb (copied next to each page)
 test_build.py               checks for the trailer
 shorts/
-  stories_library.json      60 stories, the queue generate.py works through first (both styles)
-  stories.json              10 starter stories, silhouette style
-  stories_inkwash.json      10 starter stories, sumi-e ink style
-  kit.py                    the drawing kit: skies, grounds, props, people, effects, styles
-  build_short.py            narrates one story and writes its HyperFrames page (+ the animation interpreter)
+  stories_library.json      60 stories, the queue generate.py works through first
+  stories.json              10 starter stories
+  stories_inkwash.json      10 more starter stories (their old "style" field is no longer used)
+  build_short.py            narrates one story and writes its HyperFrames page
   test_shorts.py            checks every story before any rendering
   render.txt                which story ids the next cloud run renders
   fetch.py                  downloads a finished batch to shorts/output/ (optional)
 longform/
   videos/NN-<id>.json       one file per long video: chapters of beats, one template per video
-  lineart.py                the glowing line-art kit: templates, skies, lands, figures, props, effects
   build_long.py             plan | chapter <id> <n> | finish <id> <dir> <out>
   test_long.py              checks every video (10-12 minutes, own template, meditation close, disclaimer)
   render.txt                which video ids the next cloud run renders
@@ -260,26 +260,33 @@ A story is four **beats**. Each beat is one or two sentences of narration plus t
 2. **Captions.** `chunks()` cuts each sentence into blocks of up to 5 words, breaking after punctuation;
    `captions()` times every word with Whisper (`word_times()`: faster-whisper `base.en`, matched to the script),
    falling back to timing by length with a warning. The spoken word lights up in the accent colour.
-3. **Scenes.** `compose_beat()` asks the kit for the sky, the ground, each cast member and the effects, and
-   collects their *acts* with absolute times. The master always carries a soft glow.
+3. **Scenes.** `compose_beat()` asks `paper.scene()` for the page: the sky, the ground, each cast member and the
+   effects as paper cut-outs, and their *acts* with absolute times. The master stands before a paper sunburst.
 4. **The page.** The title card shows from the first frame, the tradition (`"A Zen story"`) closes the last beat.
-5. **Camera and cuts.** A multiplane camera: each beat's scene is four layers (sky `-L0`, far land `-L1`, figures
-   `-L2`, a foreground branch `-L3`) and every slow eased move shifts them at different rates (the sky lags, the
-   branch leads), so the picture has depth. Shots vary: wide push-ins and pull-outs, pans, and medium shots framed
-   on the beat's main figure (`focus()`). A new setting is a hard cut, the same setting dissolves over 0.3 s; never
-   a dip to black. The long videos do the same with sky and land layers and gentler moves.
-5b. **Life.** Every figure sways a little on its own breath (`idle`), and the robe's hem follows a beat later
-   (overlapping action); walking swings the arms and they settle with a small overshoot; dust drifts in the light
-   (`motes`); the branch sways. Figures have a neck, shoulders, bell sleeves with hands and faint robe folds.
-6. **Depth.** Cast drawn back to front (`depth_order()`), a thin rim light between overlapping silhouettes, and a
-   faint static grain so gradients don't band.
+5. **Pop-up, strictly.** Every scene is a page of a pop-up book (`paper.js`):
+   - Each piece (class `pp`: the sun, each cloud, every strip of land, each figure and prop) is flat card with a
+     soft shadow. When its page opens it stands up off the page, back to front, hinged at its base, with a springy
+     overshoot (`back.out`).
+   - A new setting: the page's pieces fold flat (front first), and the next page turns over onto it from the left
+     edge (`TURN` = 0.6 s), then its pieces stand up.
+   - The same setting: the next beat dissolves in (0.3 s); what was standing stays; only new figures pop up.
+   - The opening page is already standing on the first frame (the hook); only its figures pop up.
+   - No glows, no gradients, no traced lines, no floating dust, never a dip to black.
+6. **Camera.** A multiplane camera over the diorama: sky `-L0`, land `-L1`, figures `-L2`, a branch `-L3`; every
+   slow move shifts them at different rates. Wide push-ins, pans, and medium shots on the main figure (`focus()`).
+   One setting is one continuous camera.
+7. **Puppets.** Figures are paper dolls on tabs: they rock a hair on their base (`idle`), slide along a slot and
+   waddle with a hop when they walk, and swing their arms on gold paper fasteners. The branch swings on its pin.
 
-## 11. The silhouette and ink kit
+## 11. The paper pop-up kit
 
-`shorts/kit.py` draws everything:
+`paper.py` draws everything, for both frames (`paper.frame("short" | "long", world)`) and both channels (`world`
+"asia": tiled roofs and a pagoda; "levant": flat roofs, domes and palms):
 
-- **Everything stands on the ground line**, drawn around `(0, 0)`. Near figures stand at `y = 1390` (`FEET`),
-  the horizon is at `1300` (`HZ`).
+- **Everything stands on the ground line**, drawn around `(0, 0)`. Near figures stand at `GF` (1390 in a Short,
+  850 in a long video), the horizon is at `HZ` (1300, 760).
+- **Colour.** Bright card stock (`PAPER`, `ROBES`); each sky (`SKIES`) sets the page colour and tints every piece
+  toward its light: night pieces turn deep blue, dawn ones rose.
 - **Three groups per figure.** `place()` wraps each drawing:
 
   ```
@@ -290,15 +297,13 @@ A story is four **beats**. Each beat is one or two sentences of narration plus t
 
 - **Arms** (`-al`, `-ar`) rotate at the shoulder: raise, reach, bless, dance.
 - **Nesting.** `"in": 0` draws a figure inside cast member 0, so Nasruddin rides his donkey.
-- **No faces, ever.** The master is a robed figure in soft light (`-glow`, kept outside the body group so a sit
-  pivots at the feet), never a portrait of anyone.
+- **No faces, ever.** Heads are plain paper ovals. The master stands before a paper sunburst (`-glow`, kept outside
+  the body group so a sit pivots at the feet), never a portrait of anyone.
 - **People:** `master seeker monk nun man woman child elder dancer samurai farmer nasruddin`.
-- **Styles.** `kit.use("inkwash")` swaps the whole palette to sumi-e: near-black ink `#1a1714` on rice-paper skies,
-  grey wash ridges, a red seal sun, and seal-red for the spoken word (`CSS["inkwash"]` in `build_short.py`).
 
 ## 12. The animation interpreter
 
-Stories don't contain JavaScript. They contain *verbs*. The page holds a small dictionary `F` that turns each verb
+Stories don't contain JavaScript. They contain *verbs*. `paper.js` holds a small dictionary `F` that turns each verb
 into GSAP calls:
 
 ```js
@@ -307,7 +312,7 @@ into GSAP calls:
 ```
 
 `a.t` is the element, `a.s` the start time, `a.d` the duration, and `n(d, p)` turns a duration into a finite repeat
-count. The tests discover verbs by their six-space indentation, so keep it.
+count. The tests discover verbs by their four-space indentation in `paper.js`, so keep it.
 
 ## 13. The cloud pipeline
 
@@ -329,12 +334,9 @@ then records the items in `generated.txt`. A failed render marks nothing done.
 `longform/` is its own format, separate from the Shorts, with the same voice and captions set at the bottom of a
 16:9 frame.
 
-- **Look.** Glowing line art: every line traces itself in when a beat begins, inside a soft glow. Figures and props
-  are cut-outs filled with the sky, so lines behind them never show through. The same setting dissolves and keeps
-  what is already drawn; a new setting draws itself in.
-- **One template per video**, from `_template(line, glow, deep, horizon, motif)` in `lineart.py`: `saffron`,
-  `maroon`, `lotus`, `bodhi`, `himalaya`, `ganga`, `zendo`, `moonlake`, `tao`, `sufi`, `satori`, … Motifs:
-  `sunburst motes constellation halo mandala ripple`.
+- **Look.** The Shorts' paper pop-up pages (`paper.py`, `paper.js`) in the wide frame: the same pieces, page turns,
+  pop-ups and puppets, with gentler camera moves. (The `template` field in each video file is left from the line-art
+  days and no longer used.)
 - **Chapters.** Chapter 0 is a cold open; story chapters alternate with reflections; **the last chapter is always a
   guided meditation** (sit and breathe, mist, fireflies, ripples). Lands: `hills field desert city sea garden
   mountain river forest zen`; effects: `rain lightning rays sparkle dove petals mist ripples fireflies`.
@@ -356,7 +358,7 @@ then records the items in `generated.txt`. A failed render marks nothing done.
    adults; beats 2–3 tell the story; beat 4 lands one line for the listener's life and a tiny invitation ("One
    breath. Only this."). Spoken, plain, unhurried. The world of the railway station and the transistor radio,
    never of screens. `BANNED_ERA_WORDS` in `build.py` lists the modern words the check refuses.
-3. **Add it** to `shorts/stories_library.json` (add `"style": "inkwash"` for the ink style). Unique kebab-case `id`,
+3. **Add it** to `shorts/stories_library.json`. Unique kebab-case `id`,
    a `title`, a `ref` that names the tradition (`"A Zen story"`, `"Chuang Tzu"`, `"A Sufi tale"`).
 4. **Stage each beat.** `sky`: `dawn day dusk night storm`. `ground`: `hills field desert city sea garden forest
    river zen mountain`. Then the `cast`:
@@ -379,12 +381,11 @@ then records the items in `generated.txt`. A failed render marks nothing done.
 
 ## 15. Add a prop, an action or a style
 
-- **A prop:** add an entry to `PROPS` in `kit.py` (and a line version in `lineart.py` for the long videos), drawn
-  around `(0, 0)`. Use `{pid}` in an id if an action needs a part (`cup` has `-liq`, `cage` has `-door` and `-bird`).
-- **An action:** add one line to `F` in `build_short.py` (and `build_long.py`), at the same indentation. A new verb
-  must be used by at least one story or video, or the test fails: dead verbs are deleted.
-- **A style:** a palette in `STYLES` in `kit.py`, a matching entry in `CSS` in `build_short.py`, then
-  `"style": "<name>"` on a story.
+- **A prop:** add an entry to `PROPS` in `paper.py`, drawn around `(0, 0)` with `{colour}` names from `PAPER`. Use
+  `{pid}` in an id if an action needs a part (`cup` has `-liq`, `cage` has `-door` and `-bird`). Copy `paper.py` and
+  `paper.js` to the other channel's repo too: both channels share them.
+- **An action:** add one line to `F` in `paper.js`, at the same indentation. Animate transforms and opacity only,
+  and keep it paper: things stand up, fold, slide, rock and swing; nothing glows or fades in.
 
 ## 16. Checking your work
 
