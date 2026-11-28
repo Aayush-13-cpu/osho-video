@@ -225,7 +225,7 @@ def stamp(t):
 def description(v, starts):
     """YouTube text: title, description, chapter timestamps (the first at 0:00), sources, disclaimer and hashtags."""
     marks = "\n".join(f"{stamp(t)} {c['title']}" for t, c in zip(starts, v["chapters"]))
-    refs = " · ".join(dict.fromkeys(c["ref"] for c in v["chapters"]))
+    refs = " · ".join(dict.fromkeys(x for c in v["chapters"] for x in c["ref"].split(" · ")))  # each source once
     return (f"{v['title']}\n\n{v['description']}\n\nChapters\n{marks}\n\nStories and sources: {refs}\n\n{DISCLAIMER}\n\n"
             f"{' '.join(v['tags'])}\n")
 

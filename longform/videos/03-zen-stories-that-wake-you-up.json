@@ -1,5 +1,5 @@
 {"id": "zen-stories-that-wake-you-up", "template": "lotus", "title": "Osho and the Zen Stories That Wake You Up", "thumbnail": "Osho's Zen Stories",
- "description": "What Osho taught about Zen, in plain words. Five old Zen stories, told slowly, each one a small bucket of cold water. The master who only said: Is that so? Two monks and a woman at the river. The finger pointing at the moon. The stonecutter who wanted to be everything. A samurai who asked about heaven and hell. Then we sit with the sound of a temple bell.",
+ "description": "What Osho taught about Zen, in plain words. Five old Zen stories, told slowly, each one a small bucket of cold water. The master who only said: Is that so? Two monks and a woman at the river. The stonecutter who wanted to be everything. A samurai who asked about heaven and hell. A nun whose bucket broke under the full moon. And the finger pointing at the moon. Then we sit with the sound of a temple bell.",
  "tags": ["#zen", "#zenstories", "#meditation", "#osho", "#awareness", "#spirituality", "#wisdom"],
  "chapters": [
   {"title": "Osho and the Zen Stories That Wake You Up", "ref": "Osho, The Book of Wisdom", "beats": [
@@ -58,9 +58,9 @@
   ]},
   {"title": "The Stonecutter", "ref": "A Japanese folk tale · Osho, The Book of Wisdom", "beats": [
    {"say": "There was a poor stonecutter who worked all day at the foot of a mountain. One day a rich merchant passed by in a beautiful carriage, and he thought: if only I were rich.",
-    "sky": "day", "land": "mountain", "cast": [{"k": "rock", "x": 700, "s": 0.9}, {"k": "man", "x": 900, "acts": [{"do": "reach", "at": 1.0}, {"do": "lower", "at": 2.0}, {"do": "reach", "at": 3.0}]}]},
+    "sky": "day", "land": "mountain", "cast": [{"k": "rock", "x": 700, "s": 0.9}, {"k": "man", "x": 900, "acts": [{"do": "reach", "at": 1.0}, {"do": "lower", "at": 2.0}, {"do": "reach", "at": 3.0}]}, {"k": "donkey", "x": 1250, "s": 0.85, "acts": [{"do": "walk", "to": 1650, "at": 3.4, "dur": 6}]}, {"k": "man", "in": 2, "x": -10, "y": -128, "s": 0.8}]},
    {"say": "And a voice from the mountain said: so be it. He became the rich merchant. Then the prince came by with soldiers and drums, and everybody bowed. If only I were the prince.",
-    "sky": "day", "land": "city", "cast": [{"k": "crowd", "x": 1100, "n": 12}, {"k": "man", "x": 600, "acts": [{"do": "raise", "at": 5.0}]}]},
+    "sky": "day", "land": "city", "cast": [{"k": "crowd", "x": 1060, "n": 11}, {"k": "drum", "x": 1600, "s": 1.1, "acts": [{"do": "rock", "amp": 3, "period": 0.8, "at": 3.0}]}, {"k": "man", "x": 600, "acts": [{"do": "raise", "at": 5.0}]}]},
    {"say": "He became the prince. But the sun burned him in his golden chair, and he thought: the sun is more powerful. And he became the sun.",
     "sky": "day", "land": "desert", "fx": ["rays"], "cast": [{"k": "man", "x": 960, "acts": [{"do": "raise", "at": 4.0}]}]},
    {"say": "Then a cloud covered the sun, and he became the cloud. Then the wind blew the cloud away, and he became the wind.",
@@ -88,11 +88,11 @@
   ]},
   {"title": "No Water, No Moon", "ref": "A Zen story · Osho, No Water, No Moon", "beats": [
    {"say": "A nun named Chiyono studied for years, and nothing happened. Then one night she was carrying an old wooden bucket full of water.",
-    "sky": "night", "land": "garden", "cast": [{"k": "nun", "x": 600, "acts": [{"do": "walk", "to": 1000, "at": 0.4, "dur": 7}]}, {"k": "well", "x": 1350}]},
+    "sky": "night", "land": "garden", "cast": [{"k": "nun", "x": 600, "acts": [{"do": "walk", "to": 1000, "at": 0.4, "dur": 7}]}, {"k": "well", "x": 1350}, {"k": "bucket", "in": 0, "x": 44, "y": -8, "s": 0.55}]},
    {"say": "In the water she could see the full moon shining. She walked carefully, looking at the moon in her bucket.",
-    "sky": "night", "land": "garden", "cast": [{"k": "moon", "x": 1350, "y": 560, "s": 0.7}, {"k": "nun", "x": 1000, "acts": [{"do": "walk", "to": 1200, "at": 0.4, "dur": 6}]}]},
+    "sky": "night", "land": "garden", "cast": [{"k": "moon", "x": 1350, "y": 560, "s": 0.7}, {"k": "nun", "x": 1000, "acts": [{"do": "walk", "to": 1200, "at": 0.4, "dur": 6}]}, {"k": "bucket", "in": 1, "x": 44, "y": -8, "s": 0.55}]},
    {"say": "Suddenly the bamboo strip holding the bucket together snapped. The bottom fell out. The water was gone... and the moon in the water was gone.",
-    "sky": "night", "land": "garden", "fx": ["ripples"], "cast": [{"k": "nun", "x": 1200, "acts": [{"do": "kneel", "at": 1.6}]}]},
+    "sky": "night", "land": "garden", "fx": ["ripples"], "cast": [{"k": "nun", "x": 1200, "acts": [{"do": "kneel", "at": 1.6}]}, {"k": "bucket", "in": 0, "x": 44, "y": -8, "s": 0.55, "acts": [{"do": "collapse", "at": 1.2}]}]},
    {"say": "And in that moment Chiyono was free. No water, no moon. All the reflections she had been holding were gone, and only the real moon remained, shining in the sky.",
     "sky": "night", "land": "hills", "fx": ["sparkle"], "cast": [{"k": "nun", "x": 960, "acts": [{"do": "stand", "at": 2.0}, {"do": "raise", "at": 4.0}]}]},
    {"say": "Osho named a whole book after this story: No Water, No Moon. Your bucket is your mind. One day the bottom falls out... and that is not a loss. That is the beginning.",
